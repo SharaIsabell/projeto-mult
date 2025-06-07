@@ -1,0 +1,349 @@
+.calendrio-acadmico {
+  background-color: #1e1e1e;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.calendrio-acadmico .overlap-group-wrapper {
+  background-color: #1e1e1e;
+  width: 1440px;
+  height: 1830px;
+}
+
+.calendrio-acadmico .overlap-group {
+  position: relative;
+  height: 1830px;
+  background-image: url(./img/background.svg);
+  background-size: 100% 100%;
+}
+
+.calendrio-acadmico .overlap {
+  position: absolute;
+  width: 1326px;
+  height: 1652px;
+  top: 58px;
+  left: 57px;
+}
+
+.calendrio-acadmico .text-wrapper {
+  position: absolute;
+  width: 240px;
+  top: 1327px;
+  left: 255px;
+  font-family: "Press Start 2P", Helvetica;
+  font-weight: 400;
+  color: #1e1e1e;
+  font-size: 12px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.calendrio-acadmico .retangulo-branco {
+  position: absolute;
+  width: 1091px;
+  height: 1580px;
+  top: 40px;
+  left: 118px;
+  background-color: #ffffff;
+  border-radius: 20px;
+}
+
+.calendrio-acadmico .group {
+  height: 82px;
+  top: 1487px;
+  left: 1031px;
+  position: absolute;
+  width: 77px;
+}
+
+.calendrio-acadmico .vector {
+  position: absolute;
+  width: 44px;
+  height: 45px;
+  top: 0;
+  left: 16px;
+}
+
+.calendrio-acadmico .div {
+  position: absolute;
+  width: 75px;
+  top: 58px;
+  left: 0;
+  font-family: "Press Start 2P", Helvetica;
+  font-weight: 400;
+  color: #2d6bc7fc;
+  font-size: 12px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.calendrio-acadmico .group-2 {
+  height: 82px;
+  top: 1493px;
+  left: 221px;
+  position: absolute;
+  width: 77px;
+}
+
+.calendrio-acadmico .group-3 {
+  height: 75px;
+  top: 1493px;
+  left: 356px;
+  position: absolute;
+  width: 77px;
+}
+
+.calendrio-acadmico .icone-PDF {
+  position: absolute;
+  width: 45px;
+  height: 45px;
+  top: 0;
+  left: 15px;
+}
+
+.calendrio-acadmico .group-4 {
+  height: 75px;
+  top: 1493px;
+  left: 491px;
+  position: absolute;
+  width: 77px;
+}
+
+.calendrio-acadmico .group-5 {
+  height: 82px;
+  top: 1490px;
+  left: 626px;
+  position: absolute;
+  width: 77px;
+}
+
+.calendrio-acadmico .group-6 {
+  height: 75px;
+  top: 1490px;
+  left: 761px;
+  position: absolute;
+  width: 77px;
+}
+
+.calendrio-acadmico .group-7 {
+  height: 75px;
+  top: 1490px;
+  left: 896px;
+  position: absolute;
+  width: 77px;
+}
+
+.calendrio-acadmico .group-8 {
+  height: 82px;
+  top: 1359px;
+  left: 1031px;
+  position: absolute;
+  width: 77px;
+}
+
+.calendrio-acadmico .text-wrapper-2 {
+  top: 64px;
+  position: absolute;
+  width: 264px;
+  left: 143px;
+  font-family: "Press Start 2P", Helvetica;
+  font-weight: 400;
+  color: #1e1e1e;
+  font-size: 12px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.calendrio-acadmico .text-wrapper-3 {
+  top: 1316px;
+  position: absolute;
+  width: 264px;
+  left: 143px;
+  font-family: "Press Start 2P", Helvetica;
+  font-weight: 400;
+  color: #1e1e1e;
+  font-size: 12px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.calendrio-acadmico .imagem-calendario {
+  position: absolute;
+  width: 991px;
+  height: 1190px;
+  top: 102px;
+  left: 168px;
+  object-fit: cover;
+}
+
+.calendrio-acadmico .group-9 {
+  height: 82px;
+  top: 1365px;
+  left: 221px;
+  position: absolute;
+  width: 77px;
+}
+
+.calendrio-acadmico .group-10 {
+  height: 75px;
+  top: 1365px;
+  left: 356px;
+  position: absolute;
+  width: 77px;
+}
+
+.calendrio-acadmico .group-11 {
+  height: 75px;
+  top: 1365px;
+  left: 491px;
+  position: absolute;
+  width: 77px;
+}
+
+.calendrio-acadmico .group-12 {
+  height: 82px;
+  top: 1362px;
+  left: 626px;
+  position: absolute;
+  width: 77px;
+}
+
+.calendrio-acadmico .group-13 {
+  height: 75px;
+  top: 1362px;
+  left: 761px;
+  position: absolute;
+  width: 77px;
+}
+
+.calendrio-acadmico .group-14 {
+  height: 75px;
+  top: 1362px;
+  left: 896px;
+  position: absolute;
+  width: 77px;
+}
+
+.calendrio-acadmico .overlap-2 {
+  position: absolute;
+  width: 1050px;
+  height: 30px;
+  top: 0;
+  left: 202px;
+  background-color: #932d2ffc;
+}
+
+.calendrio-acadmico .navbar {
+  position: absolute;
+  width: 982px;
+  height: 21px;
+  top: 5px;
+  left: 44px;
+}
+
+.calendrio-acadmico .text-wrapper-4 {
+  width: 72px;
+  left: 900px;
+  position: absolute;
+  top: 5px;
+  font-family: "Press Start 2P", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 12px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.calendrio-acadmico .text-wrapper-5 {
+  position: absolute;
+  width: 168px;
+  top: 5px;
+  left: 0;
+  font-family: "Press Start 2P", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 12px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.calendrio-acadmico .text-wrapper-6 {
+  position: absolute;
+  width: 240px;
+  top: 5px;
+  left: 200px;
+  font-family: "Press Start 2P", Helvetica;
+  font-weight: 400;
+  color: #1e1e1e;
+  font-size: 12px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.calendrio-acadmico .text-wrapper-7 {
+  position: absolute;
+  width: 228px;
+  top: 5px;
+  left: 472px;
+  font-family: "Press Start 2P", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 12px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.calendrio-acadmico .text-wrapper-8 {
+  width: 132px;
+  left: 736px;
+  position: absolute;
+  top: 5px;
+  font-family: "Press Start 2P", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 12px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.calendrio-acadmico .linha-separa-menu {
+  position: absolute;
+  width: 3px;
+  height: 21px;
+  top: 0;
+  left: 456px;
+}
+
+.calendrio-acadmico .img {
+  left: 716px;
+  position: absolute;
+  width: 3px;
+  height: 21px;
+  top: 0;
+}
+
+.calendrio-acadmico .linha-separa-menu-2 {
+  left: 884px;
+  position: absolute;
+  width: 3px;
+  height: 21px;
+  top: 0;
+}
+
+.calendrio-acadmico .linha-separa-menu-3 {
+  left: 184px;
+  position: absolute;
+  width: 3px;
+  height: 21px;
+  top: 0;
+}
