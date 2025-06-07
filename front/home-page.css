@@ -1,0 +1,367 @@
+.pgina-inicial {
+  background-color: #1e1e1e;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.pgina-inicial .overlap-wrapper {
+  background-color: #1e1e1e;
+  overflow: hidden;
+  width: 1440px;
+  height: 1245px;
+}
+
+.pgina-inicial .overlap {
+  position: relative;
+  width: 1537px;
+  height: 1245px;
+}
+
+.pgina-inicial .background {
+  position: absolute;
+  width: 1440px;
+  height: 1245px;
+  top: 0;
+  left: 0;
+}
+
+.pgina-inicial .borda-vermelha {
+  position: absolute;
+  width: 1060px;
+  height: 399px;
+  top: 36px;
+  left: 202px;
+  background-color: #1e1e1e;
+  border: 6px solid;
+  border-color: #932d2f;
+}
+
+.pgina-inicial .borda-branca {
+  position: absolute;
+  width: 1048px;
+  height: 387px;
+  top: 42px;
+  left: 208px;
+  border: 4px solid;
+  border-color: #ffffff;
+}
+
+.pgina-inicial .imagem-computao {
+  position: absolute;
+  width: 752px;
+  height: 352px;
+  top: 60px;
+  left: 344px;
+  object-fit: cover;
+}
+
+.pgina-inicial .retangulo-degrade {
+  position: absolute;
+  width: 1440px;
+  height: 707px;
+  top: 477px;
+  left: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(147, 45, 47, 1) 0%,
+    rgba(30, 30, 30, 1) 84%
+  );
+}
+
+.pgina-inicial .linha-vermelha {
+  top: 469px;
+  position: absolute;
+  width: 1440px;
+  height: 11px;
+  left: 0;
+}
+
+.pgina-inicial .linha-branca {
+  top: 478px;
+  position: absolute;
+  width: 1440px;
+  height: 11px;
+  left: 0;
+}
+
+.pgina-inicial .retangulo-branco {
+  position: absolute;
+  width: 925px;
+  height: 453px;
+  top: 570px;
+  left: 257px;
+  background-color: #ffffff;
+  border-radius: 20px;
+}
+
+.pgina-inicial .formul-rio-de {
+  position: absolute;
+  width: 659px;
+  top: 842px;
+  left: 390px;
+  font-family: "Press Start 2P", Helvetica;
+  font-weight: 400;
+  color: #1e1e1e;
+  font-size: 12px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.pgina-inicial .text-wrapper {
+  text-decoration: underline;
+}
+
+.pgina-inicial .span {
+  font-family: "Press Start 2P", Helvetica;
+  font-weight: 400;
+  color: #1e1e1e;
+  font-size: 12px;
+  letter-spacing: 0;
+}
+
+.pgina-inicial .div {
+  position: absolute;
+  width: 706px;
+  top: 798px;
+  left: 367px;
+  font-family: "Press Start 2P", Helvetica;
+  font-weight: 400;
+  color: #1e1e1e;
+  font-size: 12px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.pgina-inicial .text-wrapper-2 {
+  position: absolute;
+  width: 343px;
+  top: 594px;
+  left: 282px;
+  font-family: "Press Start 2P", Helvetica;
+  font-weight: 400;
+  color: #1e1e1e;
+  font-size: 20px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.pgina-inicial .text-wrapper-3 {
+  position: absolute;
+  width: 343px;
+  top: 751px;
+  left: 282px;
+  font-family: "Press Start 2P", Helvetica;
+  font-weight: 400;
+  color: #1e1e1e;
+  font-size: 20px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.pgina-inicial .retangulo-menu {
+  position: absolute;
+  width: 1060px;
+  height: 30px;
+  top: 0;
+  left: 202px;
+  background-color: #932d2ffc;
+}
+
+.pgina-inicial .retangulo-menu-2 {
+  position: absolute;
+  width: 1050px;
+  height: 30px;
+  top: 0;
+  left: 202px;
+  background-color: #932d2ffc;
+}
+
+.pgina-inicial .icone-instagram {
+  left: 702px;
+  position: absolute;
+  width: 45px;
+  height: 45px;
+  top: 645px;
+}
+
+.pgina-inicial .icone-telegram {
+  left: 957px;
+  position: absolute;
+  width: 45px;
+  height: 45px;
+  top: 645px;
+}
+
+.pgina-inicial .icone-email {
+  left: 447px;
+  position: absolute;
+  width: 45px;
+  height: 45px;
+  top: 645px;
+}
+
+.pgina-inicial .navbar {
+  position: absolute;
+  width: 982px;
+  height: 21px;
+  top: 5px;
+  left: 246px;
+}
+
+.pgina-inicial .text-wrapper-4 {
+  width: 72px;
+  left: 900px;
+  position: absolute;
+  top: 5px;
+  font-family: "Press Start 2P", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 12px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.pgina-inicial .text-wrapper-5 {
+  position: absolute;
+  width: 168px;
+  top: 5px;
+  left: 0;
+  font-family: "Press Start 2P", Helvetica;
+  font-weight: 400;
+  color: #1e1e1e;
+  font-size: 12px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.pgina-inicial .text-wrapper-6 {
+  position: absolute;
+  width: 240px;
+  top: 5px;
+  left: 200px;
+  font-family: "Press Start 2P", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 12px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.pgina-inicial .text-wrapper-7 {
+  position: absolute;
+  width: 228px;
+  top: 5px;
+  left: 472px;
+  font-family: "Press Start 2P", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 12px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.pgina-inicial .text-wrapper-8 {
+  width: 132px;
+  left: 736px;
+  position: absolute;
+  top: 5px;
+  font-family: "Press Start 2P", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 12px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.pgina-inicial .linha-separa-menu {
+  position: absolute;
+  width: 3px;
+  height: 21px;
+  top: 0;
+  left: 456px;
+}
+
+.pgina-inicial .img {
+  left: 716px;
+  position: absolute;
+  width: 3px;
+  height: 21px;
+  top: 0;
+}
+
+.pgina-inicial .linha-separa-menu-2 {
+  left: 884px;
+  position: absolute;
+  width: 3px;
+  height: 21px;
+  top: 0;
+}
+
+.pgina-inicial .linha-separa-menu-3 {
+  left: 184px;
+  position: absolute;
+  width: 3px;
+  height: 21px;
+  top: 0;
+}
+
+.pgina-inicial .group {
+  position: absolute;
+  width: 427px;
+  height: 50px;
+  top: 1068px;
+  left: 507px;
+}
+
+.pgina-inicial .overlap-group {
+  position: relative;
+  width: 425px;
+  height: 50px;
+  background-image: url(./img/retangulositeuepb.png);
+  background-size: 100% 100%;
+}
+
+.pgina-inicial .text-wrapper-9 {
+  position: absolute;
+  width: 343px;
+  top: 15px;
+  left: 41px;
+  font-family: "Press Start 2P", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 20px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.pgina-inicial .mascote {
+  display: flex;
+  flex-direction: column;
+  width: 455px;
+  height: 296px;
+  align-items: flex-start;
+  gap: 10px;
+  position: absolute;
+  top: 752px;
+  left: 1082px;
+}
+
+.pgina-inicial .comp {
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  height: 296.11px;
+  margin-bottom: -0.11px;
+  object-fit: cover;
+}
