@@ -1,218 +1,138 @@
-/* Calendário Acadêmico */
-.calendrio-acadmico {
+/* RESET E BASE */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Press Start 2P", sans-serif;
   background-color: #1e1e1e;
+  color: white;
+}
+
+.calendario-academico {
+  width: 100%;
+}
+
+/* NAVBAR RESPONSIVA */
+.navbar-wrapper {
+  background-color: #932d2f;
   display: flex;
-  flex-direction: row;
   justify-content: center;
+  padding: 8px 0;
   width: 100%;
-}
-
-.calendrio-acadmico .overlap-group-wrapper {
-  background-color: #1e1e1e;
-  overflow: hidden;
-  width: 100%;
-  height: auto;
-  margin: 0 auto;
-}
-
-.calendrio-acadmico .overlap-group {
+  box-shadow: 0 4px 0 #1e1e1e;
+  z-index: 100;
   position: relative;
-  height: 1900px;
-  background-size: 100% 100%;
 }
 
-.calendrio-acadmico .background {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
+.navbar-responsive {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  max-width: 1060px;
+  width: 90%;
 }
-
-.calendrio-acadmico .overlap {
-  position: absolute;
-  top: 58px;
-  width: 100%;
-  height: 1652px;
-}
-
-.calendrio-acadmico .conteudo {
-  position: relative;
-  width: 1091px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.calendrio-acadmico .retangulo-branco {
-  background-color: #ffffff;
-  border-radius: 20px;
-  height: 1580px;
-  margin: 0 auto;
-  position: relative;
-  top: 40px;
-  width: 1091px;
-}
-
-.calendrio-acadmico .text-wrapper,
-.calendrio-acadmico .text-wrapper-2,
-.calendrio-acadmico .text-wrapper-3 {
-  position: absolute;
-  font-family: "Press Start 2P", Helvetica;
-  font-weight: 400;
-  color: #1e1e1e;
-  font-size: 12px;
-  letter-spacing: 0;
-  line-height: normal;
-  white-space: nowrap;
-}
-
-.calendrio-acadmico .text-wrapper {
-  top: 1327px;
-  left: 240px;
-  width: 240px;
-}
-
-.calendrio-acadmico .text-wrapper-2 {
-  top: 64px;
-  left: 143px;
-  width: 264px;
-}
-
-.calendrio-acadmico .text-wrapper-3 {
-  top: 1316px;
-  left: 143px;
-  width: 264px;
-}
-
-.calendrio-acadmico .imagem-calendario {
-  position: absolute;
-  width: 991px;
-  height: 1190px;
-  top: 102px;
-  left: 168px;
-  object-fit: cover;
-}
-
-.calendrio-acadmico .group,
-.calendrio-acadmico .group-2,
-.calendrio-acadmico .group-3,
-.calendrio-acadmico .group-4,
-.calendrio-acadmico .group-5,
-.calendrio-acadmico .group-6,
-.calendrio-acadmico .group-7,
-.calendrio-acadmico .group-8,
-.calendrio-acadmico .group-9,
-.calendrio-acadmico .group-10,
-.calendrio-acadmico .group-11,
-.calendrio-acadmico .group-12,
-.calendrio-acadmico .group-13,
-.calendrio-acadmico .group-14 {
-  position: absolute;
-  width: 77px;
-  height: 82px;
-}
-
-.calendrio-acadmico .icone-PDF,
-.calendrio-acadmico .vector {
-  position: absolute;
-  width: 45px;
-  height: 45px;
-  top: 0;
-  left: 15px;
-}
-
-.calendrio-acadmico .vector {
-  width: 44px;
-  left: 16px;
-}
-
-.calendrio-acadmico .div {
-  position: absolute;
-  width: 75px;
-  top: 58px;
-  left: 0;
-  font-family: "Press Start 2P", Helvetica;
-  font-weight: 400;
-  color: #2d6bc7fc;
-  font-size: 12px;
-  letter-spacing: 0;
-  line-height: normal;
-}
-
-/* Navbar */
-.calendrio-acadmico .overlap-2 {
-  position: absolute;
-  width: 1050px;
-  height: 30px;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: #932d2ffc;
-}
-
-.calendrio-acadmico .navbar {
-  position: absolute;
-  width: 982px;
-  height: 21px;
-  top: 5px;
-  left: 44px;
-}
-
-.calendrio-acadmico .text-wrapper-4,
-.calendrio-acadmico .text-wrapper-5,
-.calendrio-acadmico .text-wrapper-6,
-.calendrio-acadmico .text-wrapper-7,
-.calendrio-acadmico .text-wrapper-8 {
-  position: absolute;
-  top: 5px;
-  font-family: "Press Start 2P", Helvetica;
-  font-weight: 400;
-  font-size: 12px;
-  letter-spacing: 0;
-  line-height: normal;
-  white-space: nowrap;
-  color: #ffffff;
-}
-
-.calendrio-acadmico .text-wrapper-5 { left: 0; width: 168px; }
-.calendrio-acadmico .text-wrapper-6 { left: 200px; width: 240px; }
-.calendrio-acadmico .text-wrapper-7 { left: 472px; width: 228px; }
-.calendrio-acadmico .text-wrapper-8 { left: 736px; width: 132px; }
-.calendrio-acadmico .text-wrapper-4 { left: 900px; width: 72px; }
-
-.calendrio-acadmico .linha-separa-menu,
-.calendrio-acadmico .img,
-.calendrio-acadmico .linha-separa-menu-2,
-.calendrio-acadmico .linha-separa-menu-3 {
-  position: absolute;
-  width: 3px;
-  height: 21px;
-  top: 0;
-}
-
-.calendrio-acadmico .linha-separa-menu { left: 456px; }
-.calendrio-acadmico .img { left: 716px; }
-.calendrio-acadmico .linha-separa-menu-2 { left: 884px; }
-.calendrio-acadmico .linha-separa-menu-3 { left: 184px; }
 
 .nav-item {
-  transition: all 0.3s ease;
+  font-family: "Press Start 2P", Helvetica, sans-serif;
+  font-size: 12px;
+  color: white;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+  white-space: nowrap;
 }
 
 .nav-item:hover {
   transform: scale(1.1);
   color: #000000;
-  cursor: pointer;
 }
 
-.nav-item a {
-  color: white;
-  text-decoration: none;
-  display: inline-block;
+.nav-item.active {
+  font-weight: bold;
+  color: #ffcc00;
+}
+
+.separator {
+  width: 1px;
+  height: 18px;
+  background-color: white;
+}
+
+/* CONTEÚDO PRINCIPAL */
+main.conteudo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 1rem;
+}
+
+h1 {
+  font-size: 18px;
+  color: #1e1e1e;
+  text-align: left;
   width: 100%;
-  height: 100%;
+  margin-bottom: 1.5rem;
 }
 
-.nav-item a:hover {
-  color: #000000;
+/* CAIXA CENTRAL BRANCA */
+.retangulo-branco {
+  background-color: white;
+  border-radius: 20px;
+  max-width: 1100px;
+  width: 100%;
+  padding: 2rem;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* IMAGEM CENTRAL DO CALENDÁRIO */
+.imagem-calendario {
+  margin-bottom: 2rem;
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* SEÇÃO DE PDFs */
+.secao-pdfs {
+  text-align: center;
+}
+
+.secao-pdfs h2 {
+  font-size: 14px;
+  color: #1e1e1e;
+  margin-bottom: 1rem;
+}
+
+/* LINKS DE CALENDÁRIO (PDFs) */
+.grupo-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.link-calendario {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100px;
+  text-align: center;
+  color: #2d6bc7;
+  font-size: 12px;
+  text-decoration: none;
+  transition: transform 0.2s;
+}
+
+.link-calendario:hover {
+  transform: scale(1.05);
+  color: #932d2f;
+}
+
+.link-calendario img {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 0.5rem;
 }
