@@ -3,23 +3,188 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="globals.css" />
-  <link rel="stylesheet" href="styleguide.css" />
-  <link rel="stylesheet" href="calendario.css" />
   <title>Calendário Acadêmico</title>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <style>
+    /* BASE RETRÔ */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Press Start 2P', monospace;
+      background-color: #000;
+      background-image: url("img/background.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-attachment: fixed;
+      color: #fff;
+    }
+
+    .calendario-academico {
+      background-color: rgba(0, 0, 0, 0.85);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* NAVBAR RETRÔ */
+    .navbar-wrapper {
+      background-color: #932d2f;
+      display: flex;
+      justify-content: center;
+      padding: 8px 0;
+      width: 100%;
+      box-shadow: 0 4px 0 #1e1e1e;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .navbar-responsive {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 16px;
+      max-width: 1060px;
+      width: 90%;
+    }
+
+    .nav-item {
+      font-size: 12px;
+      color: white;
+      text-decoration: none;
+      transition: transform 0.3s ease;
+      white-space: nowrap;
+    }
+
+    .nav-item:hover {
+      transform: scale(1.1);
+      color: #ffcc00;
+    }
+
+    .nav-item.active {
+      font-weight: bold;
+      color: #ffcc00;
+    }
+
+    .separator {
+      width: 1px;
+      height: 18px;
+      background-color: white;
+    }
+
+    /* CONTEÚDO PRINCIPAL */
+    .conteudo {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem 1rem;
+    }
+
+    .retangulo-branco {
+      background-color: #fff;
+      border: 4px solid #932d2f;
+      border-radius: 20px;
+      max-width: 1000px;
+      width: 100%;
+      padding: 2rem;
+      box-shadow: 0 0 16px #c00;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    h1 {
+      font-size: 18px;
+      color: #932d2f;
+      margin-bottom: 1.5rem;
+      text-align: center;
+      text-shadow: 1px 1px #000;
+    }
+
+    .imagem-calendario {
+      margin-bottom: 2rem;
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+      border: 2px solid #932d2f;
+    }
+
+    .secao-pdfs {
+      text-align: center;
+      width: 100%;
+    }
+
+    .secao-pdfs h2 {
+      font-size: 14px;
+      color: #932d2f;
+      margin-bottom: 1rem;
+      text-shadow: 1px 1px #000;
+    }
+
+    .grupo-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.5rem;
+    }
+
+    .link-calendario {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100px;
+      text-align: center;
+      color: #000;
+      font-size: 10px;
+      background-color: #fff;
+      border: 2px solid #932d2f;
+      border-radius: 10px;
+      padding: 0.5rem;
+      text-decoration: none;
+      transition: all 0.2s ease-in-out;
+    }
+
+    .link-calendario:hover {
+      background-color: #932d2f;
+      color: #fff;
+      transform: scale(1.05);
+    }
+
+    .link-calendario img {
+      width: 48px;
+      height: 48px;
+      margin-bottom: 0.5rem;
+    }
+
+    @media (max-width: 600px) {
+      .nav-item {
+        font-size: 10px;
+      }
+
+      .link-calendario {
+        width: 80px;
+      }
+
+      h1 {
+        font-size: 14px;
+      }
+    }
+  </style>
 </head>
 <body>
   <div class="calendario-academico">
 
+    <!-- NAVBAR -->
     <div class="navbar-wrapper">
       <nav class="navbar-responsive">
         <a href="home-page.html" class="nav-item">Página Inicial</a>
         <div class="separator"></div>
-        <a href="#" class="nav-item">Calendário Acadêmico</a>
+        <a href="#" class="nav-item active">Calendário Acadêmico</a>
         <div class="separator"></div>
         <a href="fluxograma.html" class="nav-item">Fluxograma do Curso</a>
         <div class="separator"></div>
-        <a href="#" class="nav-item">Professores</a>
+        <a href="professores.html" class="nav-item">Professores</a>
         <div class="separator"></div>
         <a href="#" class="nav-item">Outros</a>
       </nav>
@@ -29,15 +194,12 @@
     <main class="conteudo">
       <div class="retangulo-branco">
         <h1>Calendário Acadêmico</h1>
-        <!-- Imagem principal -->
+
         <img class="imagem-calendario" src="img/imagemcalendario.png" alt="Imagem do calendário oficial" />
 
-        <!-- Todos os PDFs agrupados abaixo da imagem -->
         <section class="secao-pdfs">
           <h2>Calendários em PDF</h2>
-          
           <div class="grupo-links">
-            <!-- Calendários Atuais -->
             <a class="link-calendario" href="pdfs/calendario-2025-1.pdf" target="_blank">
               <img src="img/iconepdf-7.svg" alt="PDF 2025.1" />
               <p>2025.1</p>
@@ -50,8 +212,6 @@
               <img src="img/iconepdf-7.svg" alt="PDF 2024.1" />
               <p>2024.1</p>
             </a>
-
-            <!-- Calendários Anteriores -->
             <a class="link-calendario" href="pdfs/calendario-2023-2.pdf" target="_blank">
               <img src="img/iconepdf-7.svg" alt="PDF 2023.2" />
               <p>2023.2</p>

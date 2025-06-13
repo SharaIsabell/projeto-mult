@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PLACAR DE PROFESSORES</title>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: #000;
+      background-image: url("img/background.png");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      background-attachment: fixed;
+      font-family: 'Press Start 2P', cursive;
+      color: #fff;
+    }
+
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.85);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* NAVBAR RESPONSIVA RETRÔ */
+    .navbar-wrapper {
+      background-color: #932d2f;
+      display: flex;
+      justify-content: center;
+      padding: 8px 0;
+      width: 100%;
+      box-shadow: 0 4px 0 #1e1e1e;
+      z-index: 1000;
+      position: sticky;
+      top: 0;
+    }
+
+    .navbar-responsive {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 16px;
+      max-width: 1060px;
+      width: 90%;
+    }
+
+    .nav-item {
+      font-family: "Press Start 2P", Helvetica, sans-serif;
+      font-size: 12px;
+      color: white;
+      text-decoration: none;
+      transition: transform 0.3s ease;
+      white-space: nowrap;
+    }
+
+    .nav-item:hover {
+      transform: scale(1.1);
+      color: #000000;
+    }
+
+    .nav-item.active {
+      font-weight: bold;
+      color: #ffcc00;
+    }
+
+    .separator {
+      width: 1px;
+      height: 18px;
+      background-color: white;
+    }
+
+    .page-container {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    h1 {
+      color: #fff;
+      font-size: 20px;
+      margin: 30px auto 20px;
+      text-align: center;
+      text-shadow: 2px 2px #c00;
+    }
+
+    .scoreboard {
+      flex-grow: 1;
+      width: 90%;
+      max-width: 1000px;
+      margin: 0 auto 60px;
+      border: 4px solid #c00;
+      padding: 10px;
+      background-color: #111;
+      box-shadow: 0 0 20px #c00;
+    }
+
+    .scoreboard-header,
+    .scoreboard-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 25px;
+      border-bottom: 2px dashed #c00;
+      font-size: 12px;
+    }
+
+    .scoreboard-header {
+      color: #fff;
+      border-bottom: 4px double #c00;
+    }
+
+    .scoreboard-row:nth-child(even) {
+      background-color: #1a1a1a;
+    }
+
+    .scoreboard-row:hover {
+      background-color: #2a2a2a;
+    }
+
+    .professor {
+      text-align: left;
+      width: 50%;
+    }
+
+    .email {
+      text-align: right;
+      width: 50%;
+    }
+
+    a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: #c00;
+      text-decoration: underline;
+    }
+
+    footer {
+      padding: 30px 0;
+      background-color: #111;
+      border-top: 4px dotted #c00;
+      text-align: center;
+    }
+
+    .footer-text {
+      color: #c00;
+      font-size: 10px;
+      margin-bottom: 20px;
+      text-shadow: 1px 1px #000;
+      letter-spacing: 2px;
+    }
+
+    .hud-line {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .life-block {
+      width: 20px;
+      height: 20px;
+      background-color: #c00;
+      border: 2px solid #fff;
+      box-shadow: inset -1px -1px 0 #800;
+    }
+
+    .score-label {
+      color: #fff;
+      font-size: 10px;
+      margin-left: 20px;
+      text-shadow: 1px 1px #000;
+    }
+
+    @media (max-width: 600px) {
+      .scoreboard-header,
+      .scoreboard-row {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .professor,
+      .email {
+        width: 100%;
+        margin: 5px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="overlay">
+
+    <!-- NAVBAR -->
+    <div class="navbar-wrapper">
+      <nav class="navbar-responsive">
+        <a href="home-page.html" class="nav-item">Página Inicial</a>
+        <div class="separator"></div>
+        <a href="#" class="nav-item">Calendário Acadêmico</a>
+        <div class="separator"></div>
+        <a href="fluxograma.html" class="nav-item">Fluxograma do Curso</a>
+        <div class="separator"></div>
+        <a href="#" class="nav-item active">Professores</a>
+        <div class="separator"></div>
+        <a href="#" class="nav-item">Outros</a>
+      </nav>
+    </div>
+
+    <div class="page-container">
+      <h1>PROFESSORES EFETIVOS - CONTATO</h1>
+
+      <div class="scoreboard">
+        <div class="scoreboard-header">
+          <div class="professor">PROFESSOR</div>
+          <div class="email">E-MAIL</div>
+        </div>
+
+        <!-- Exemplo de um professor (repita os outros aqui) -->
+        <div class="scoreboard-row">
+          <div class="professor">Ana Isabella Muniz Leite</div>
+          <div class="email"><a href="mailto:isabella@servidor.uepb.edu.br">isabella@servidor.uepb.edu.br</a></div></div>
+        <div class="scoreboard-row"><div class="professor">Antonio Carlos de Albuquerque</div><div class="email"><a href="mailto:antoniocarlosdc@uepb.edu.br">antoniocarlosdc@uepb.edu.br</a></div></div>
+        <div class="scoreboard-row"><div class="professor">Cheyenne Ribeiro Guedes Isidro</div><div class="email"><a href="mailto:charibeiro@servidor.uepb.edu.br">charibeiro@servidor.uepb.edu.br</a></div></div>
+        <div class="scoreboard-row"><div class="professor">Daniel Scherer</div><div class="email"><a href="mailto:scherer@servidor.uepb.edu.br">scherer@servidor.uepb.edu.br</a></div></div>
+        <div class="scoreboard-row"><div class="professor">Dunfrey Pires Aragão</div><div class="email"><a href="mailto:dunfrey.aragao@servidor.uepb.edu.br">dunfrey.aragao@servidor.uepb.edu.br</a></div></div>
+        <div class="scoreboard-row"><div class="professor">Edson Holanda Cavalcante Junior</div><div class="email"><a href="mailto:edsonholanda@uepb.edu.br">edsonholanda@uepb.edu.br</a></div></div>
+        <div class="scoreboard-row"><div class="professor">Eduardo Jorge Valadares Oliveira</div><div class="email"><a href="mailto:edujvo@servidor.uepb.edu.br">edujvo@servidor.uepb.edu.br</a></div></div>
+        <div class="scoreboard-row"><div class="professor">Fábio Luiz Leite Júnior</div><div class="email"><a href="mailto:fabioleite@servidor.uepb.edu.br">fabioleite@servidor.uepb.edu.br</a></div></div>
+        <div class="scoreboard-row"><div class="professor">Frederico Moreira Bublitz</div><div class="email"><a href="mailto:fredbublitz@servidor.uepb.edu.br">fredbublitz@servidor.uepb.edu.br</a></div></div>
+        <div class="scoreboard-row"><div class="professor">Janderson Jason Barbosa Aguiar</div><div class="email"><a href="mailto:janderson@servidor.uepb.edu.br">janderson@servidor.uepb.edu.br</a></div></div>
+        <div class="scoreboard-row"><div class="professor">Katia Elizabete Galdino</div><div class="email"><a href="mailto:katiagaldino@gmail.com">katiagaldino@gmail.com</a></div></div>
+        <div class="scoreboard-row"><div class="professor">Kézia de Vasconcelos Oliveira Dantas</div><div class="email"><a href="mailto:kezia.vasconcelos@servidor.uepb.edu.br">kezia.vasconcelos@servidor.uepb.edu.br</a></div></div>
+        <div class="scoreboard-row"><div class="professor">Luciana de Queiroz Leal Gomes</div><div class="email"><a href="mailto:lucianaleal@servidor.uepb.edu.br">lucianaleal@servidor.uepb.edu.br</a></div></div>
+        <div class="scoreboard-row"><div class="professor">Misael Elias de Morais</div><div class="email"><a href="mailto:moraiscg@gmail.com">moraiscg@gmail.com</a></div></div>
+        <div class="scoreboard-row"><div class="professor">Paulo Eduardo e Silva Barbosa</div><div class="email"><a href="mailto:pesbarbosa@gmail.com">pesbarbosa@gmail.com</a></div></div>
+        <div class="scoreboard-row"><div class="professor">Robson Pequeno de Souto</div><div class="email"><a href="mailto:sousarob@servidor.uepb.edu.br">sousarob@servidor.uepb.edu.br</a></div></div>
+        <div class="scoreboard-row"><div class="professor">Sabrina de Figueiredo Souto</div><div class="email"><a href="mailto:sabrinadfs@servidor.uepb.edu.br">sabrinadfs@servidor.uepb.edu.br</a></div></div>
+        <div class="scoreboard-row"><div class="professor">Vladimir Costa de Alencar</div><div class="email"><a href="mailto:valencar@servidor.uepb.edu.br">valencar@servidor.uepb.edu.br</a></div></div>
+        <div class="scoreboard-row"><div class="professor">Wellington Candeia de Araújo</div><div class="email"><a href="mailto:wcandeia@servidor.uepb.edu.br">wcandeia@servidor.uepb.edu.br</a></div></div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="footer-text">PROFESSORES CONECTADOS</div>
+      <div class="hud-line" id="vida-container"></div>
+    </footer>
+  </div>
+
+  <script>
+    const linhas = document.querySelectorAll('.scoreboard-row');
+    const container = document.getElementById('vida-container');
+
+    linhas.forEach(() => {
+      const bloco = document.createElement('span');
+      bloco.className = 'life-block';
+      container.appendChild(bloco);
+    });
+
+    const score = document.createElement('span');
+    score.className = 'score-label';
+    score.textContent = `SCORE: ${linhas.length.toString().padStart(2, '0')}`;
+    container.appendChild(score);
+  </script>
+</body>
+</html>
