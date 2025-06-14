@@ -5,12 +5,9 @@
   <title>Calculadora de Nota Final - Arcade Mode</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
 
   <style>
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
 
     body {
       margin: 0;
@@ -68,6 +65,15 @@
       background: repeating-linear-gradient(45deg, #1a1a1a, #1a1a1a 10px, #111 10px, #111 20px);
     }
 
+    .arcade-container {
+      display: flex;
+      flex-direction: row;
+      gap: 40px;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
     .arcade {
       position: relative;
       background: linear-gradient(180deg, #1e1e1e, #000000);
@@ -83,81 +89,76 @@
     }
 
     .arcade h1 {
-      font-size: 16px;
-      color: #ff0000;
+      font-size: 18px;
+      color: #ffffff;
       margin-bottom: 25px;
-      text-shadow: 2px 2px white;
+      text-shadow: 2px 2px #ff0000;
       text-align: center;
     }
 
     .screen {
-    position: relative;
-    width: 100%;
-    background-color: #0a0f0a;
-    color: #33ff33;
-    border: 6px double #2e2e2e;
-    padding: 25px;
-    font-size: 14px;
-    text-align: center;
-    margin-bottom: 30px;
-    box-shadow:
-        inset 0 0 10px #003300,
-        inset 0 0 30px #001a00;
-    border-radius: 12px;
-    height: 80px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: 'Press Start 2P', monospace;
-    text-shadow: 1px 1px #003300;
-    overflow: hidden;
+      position: relative;
+      width: 100%;
+      background-color: #0a0f0a;
+      color: #33ff33;
+      border: 6px double #2e2e2e;
+      padding: 25px;
+      font-size: 14px;
+      text-align: center;
+      margin-bottom: 30px;
+      box-shadow: inset 0 0 10px #003300, inset 0 0 30px #001a00;
+      border-radius: 12px;
+      height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Press Start 2P', monospace;
+      text-shadow: 1px 1px #003300;
+      overflow: hidden;
     }
 
-    /* SCANLINES */
     .screen::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background: repeating-linear-gradient(
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background: repeating-linear-gradient(
         to bottom,
         rgba(0, 0, 0, 0.2) 0px,
         rgba(0, 0, 0, 0.2) 2px,
         transparent 2px,
         transparent 4px
-    );
-    pointer-events: none;
-    z-index: 2;
+      );
+      pointer-events: none;
+      z-index: 2;
     }
 
-    /* DISTORÇÃO ONDULADA */
     .screen::after {
-    content: "";
-    position: absolute;
-    top: -10%;
-    left: -10%;
-    width: 120%;
-    height: 120%;
-    background: radial-gradient(circle at center, rgba(0, 255, 0, 0.05), transparent 80%);
-    animation: flicker 3s infinite linear, wobble 6s infinite ease-in-out;
-    pointer-events: none;
-    z-index: 1;
+      content: "";
+      position: absolute;
+      top: -10%;
+      left: -10%;
+      width: 120%;
+      height: 120%;
+      background: radial-gradient(circle at center, rgba(0, 255, 0, 0.05), transparent 80%);
+      animation: flicker 3s infinite linear, wobble 6s infinite ease-in-out;
+      pointer-events: none;
+      z-index: 1;
     }
 
-    /* Animações */
     @keyframes flicker {
-    0%, 100% { opacity: 0.03; }
-    50% { opacity: 0.07; }
+      0%, 100% { opacity: 0.03; }
+      50% { opacity: 0.07; }
     }
 
     @keyframes wobble {
-    0% { transform: translate(0, 0); }
-    25% { transform: translate(-1px, 1px); }
-    50% { transform: translate(1px, -1px); }
-    75% { transform: translate(-1px, 0); }
-    100% { transform: translate(0, 0); }
+      0% { transform: translate(0, 0); }
+      25% { transform: translate(-1px, 1px); }
+      50% { transform: translate(1px, -1px); }
+      75% { transform: translate(-1px, 0); }
+      100% { transform: translate(0, 0); }
     }
 
     .buttons {
@@ -241,6 +242,46 @@
       box-shadow: 0 0 10px #ff0000;
     }
 
+    .message-box {
+      min-width: 280px;
+      min-height: 160px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Press Start 2P', monospace;
+      font-size: 28px;
+      padding: 30px;
+      background-color: #1a1a1a;
+      border: 4px double;
+      opacity: 0;
+      transition: opacity 0.5s ease;
+      text-align: center;
+    }
+
+    .message-box.visible {
+      opacity: 1;
+      animation: pulseBox 0.5s ease-in-out;
+    }
+
+    .message-box.level-up {
+      color: #00ff00;
+      border-color: #00ff00;
+      box-shadow: 0 0 12px #00ff00;
+      text-shadow: 2px 2px #000, 4px 4px #33ff33;
+    }
+
+    .message-box.game-over {
+      color: #ff0000;
+      border-color: #ff0000;
+      box-shadow: 0 0 12px #ff0000;
+      text-shadow: 2px 2px #000, 4px 4px #ff3333;
+    }
+
+    @keyframes pulseBox {
+      0% { transform: scale(0.9); }
+      100% { transform: scale(1.05); }
+    }
+
     footer {
       text-align: center;
       font-size: 9px;
@@ -250,63 +291,15 @@
       background: #1e1e1e;
     }
 
-    @media (max-width: 600px) {
-      .arcade {
-        padding: 20px;
+    @media (max-width: 768px) {
+      .arcade-container {
+        flex-direction: column;
       }
 
-      .screen {
-        font-size: 12px;
-        padding: 20px;
-      }
-
-      button {
-        font-size: 12px;
-        padding: 15px;
+      .message-box {
+        margin-top: 30px;
       }
     }
-
-    .titulo-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 30px;
-}
-
-.streetfighter-title {
-  font-size: 200px;
-  font-family: 'Press Start 2P', monospace;
-  text-transform: uppercase;
-  background: linear-gradient(
-    90deg,
-    #ff0000 0%,
-    #ff6600 15%,
-    #ffaa00 30%,
-    #ffff00 45%,
-    #ffaa00 60%,
-    #ff6600 75%,
-    #ff0000 90%
-  );
-  background-size: 600% auto; /* muito mais largo */
-  background-position: 10% 50%; /* começa com as cores visíveis */
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  color: white;
-  text-align: center;
-  letter-spacing: -3px;
-  margin: 80px 0 50px;
-  transform: skewX(-15deg) scaleY(1.25);
-  text-shadow:
-    4px 4px 0 #000,
-    6px 6px 4px #fff;
-  animation: fireWave 4s infinite linear;
-}
-
-@keyframes fireWave {
-  0%   { background-position: 10% 50%; }
-  100% { background-position: 90% 50%; }
-}
-
   </style>
 </head>
 <body>
@@ -326,30 +319,36 @@
   </div>
 
   <main>
-    <div class="arcade">
-      <div class="led top-left"></div>
-      <div class="led top-right"></div>
-      <h1 class="streetfighter-title">Desafio da Nota Final</h1>
-      <div class="screen" id="screen">INSIRA A MOEDA</div>
-      <div class="buttons">
-        <button onclick="press('1')" disabled>1</button>
-        <button onclick="press('2')" disabled>2</button>
-        <button onclick="press('3')" disabled>3</button>
-        <button onclick="press('4')" disabled>4</button>
-        <button onclick="press('5')" disabled>5</button>
-        <button onclick="press('6')" disabled>6</button>
-        <button onclick="press('7')" disabled>7</button>
-        <button onclick="press('8')" disabled>8</button>
-        <button onclick="press('9')" disabled>9</button>
-        <button onclick="press('.')" disabled>.</button>
-        <button onclick="press('0')" disabled>0</button>
-        <button onclick="calculate()" disabled>ENTER</button>
-      </div>
-      <div class="led bottom-left"></div>
-      <div class="led bottom-right"></div>
+    <div class="arcade-container">
+      <div class="arcade">
+        <div class="led top-left"></div>
+        <div class="led top-right"></div>
+        <h1>Desafio da Nota Final</h1>
+        <div class="screen" id="screen">INSIRA A MOEDA</div>
+        <div class="buttons">
+          <button onclick="press('1')" disabled>1</button>
+          <button onclick="press('2')" disabled>2</button>
+          <button onclick="press('3')" disabled>3</button>
+          <button onclick="press('4')" disabled>4</button>
+          <button onclick="press('5')" disabled>5</button>
+          <button onclick="press('6')" disabled>6</button>
+          <button onclick="press('7')" disabled>7</button>
+          <button onclick="press('8')" disabled>8</button>
+          <button onclick="press('9')" disabled>9</button>
+          <button onclick="press('.')" disabled>.</button>
+          <button onclick="press('0')" disabled>0</button>
+          <button onclick="calculate()" disabled>ENTER</button>
+        </div>
+        <div class="led bottom-left"></div>
+        <div class="led bottom-right"></div>
 
-      <div class="insert-coin-overlay" id="coin-overlay">
-        <button class="insert-coin-button" onclick="insertCoin()">INSERT COIN</button>
+        <div class="insert-coin-overlay" id="coin-overlay">
+          <button class="insert-coin-button" onclick="insertCoin()">INSERT COIN</button>
+        </div>
+      </div>
+
+      <div class="message-box" id="messageOverlay">
+        <span id="finalMessageText"></span>
       </div>
     </div>
   </main>
@@ -395,11 +394,13 @@
         const mediaAtual = (nota1 + nota2) / 2;
         const notaNecessaria = Math.max(0, 21 - (nota1 + nota2));
 
-        updateScreen(
-          mediaAtual >= 7
-            ? "Você já passou! 🏆"
-            : `Precisa de ${notaNecessaria.toFixed(1)} na final.`
-        );
+        if (mediaAtual >= 7) {
+          updateScreen("Você já passou! 🏆");
+          showFinalMessage("LEVEL UP");
+        } else {
+          updateScreen(`Precisa de ${notaNecessaria.toFixed(1)} na final.`);
+          showFinalMessage("GAME OVER");
+        }
         reset();
       }
     }
@@ -417,6 +418,38 @@
       const buttons = document.querySelectorAll(".buttons button");
       buttons.forEach(btn => btn.disabled = false);
     }
+
+    function showFinalMessage(text) {
+      const overlay = document.getElementById("messageOverlay");
+      const span = document.getElementById("finalMessageText");
+
+      overlay.classList.remove("level-up", "game-over");
+
+      if (text === "LEVEL UP") {
+        overlay.classList.add("level-up");
+      } else if (text === "GAME OVER") {
+        overlay.classList.add("game-over");
+      }
+
+      span.textContent = "";
+      overlay.classList.add("visible");
+
+      let i = 0;
+      function typeLetter() {
+        if (i < text.length) {
+          span.textContent += text.charAt(i);
+          i++;
+          setTimeout(typeLetter, 100); // velocidade da digitação (ms)
+        }
+      }
+
+      typeLetter();
+
+      setTimeout(() => {
+        overlay.classList.remove("visible");
+      }, 4000); // tempo de exibição total
+    }
+
   </script>
 </body>
 </html>
