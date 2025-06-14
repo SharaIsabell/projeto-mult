@@ -193,16 +193,6 @@ body {
   left: calc(50% - 255px);
 }
 
-.pgina-inicial .navbar {
-  position: absolute;
-  width: 982px;
-  height: 21px;
-  top: 5px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.pgina-inicial .text-wrapper-4,
 .pgina-inicial .text-wrapper-5,
 .pgina-inicial .text-wrapper-6,
 .pgina-inicial .text-wrapper-7,
@@ -390,4 +380,91 @@ body {
 .botao-opcao:hover {
   background-color: #00FF00;
   color: #000;
+}
+
+/* NAVBAR ESTILO CALCULADORA */
+.navbar-wrapper {
+  background-color: #932d2f;
+  display: flex;
+  justify-content: center;
+  padding: 8px 0;
+  width: 100%;
+  box-shadow: 0 4px 0 #1e1e1e;
+  z-index: 1000;
+  position: sticky;
+  top: 0;
+}
+
+.navbar-responsive {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  max-width: 1060px;
+  width: 90%;
+}
+
+.nav-item {
+  font-family: "Press Start 2P", Helvetica, sans-serif;
+  font-size: 12px;
+  color: white;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+  white-space: nowrap;
+}
+
+.nav-item:hover {
+  transform: scale(1.1);
+  color: #000000;
+}
+
+.separator {
+  width: 1px;
+  height: 18px;
+  background-color: white;
+}
+
+/* DROPDOWN MENU */
+.dropdown {
+  position: relative;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #1e1e1e;
+  border: 2px solid #fff;
+  border-radius: 8px;
+  padding: 8px;
+  top: 28px;
+  left: 0;
+  z-index: 999;
+  font-size: 10px;
+  font-family: 'Press Start 2P', monospace;
+  box-shadow: 0 0 10px #c00;
+}
+
+.dropdown-content a {
+  display: block;
+  color: white;
+  padding: 6px 10px;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
+.dropdown-content a:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+.seta-retro {
+  margin-left: 6px;
+  animation: piscar-seta 3s steps(1) infinite;
+}
+
+@keyframes piscar-seta {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
 }

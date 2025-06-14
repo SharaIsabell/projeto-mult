@@ -31,7 +31,7 @@
       flex-direction: column;
     }
 
-    /* NAVBAR RESPONSIVA RETRÔ */
+    /* NAVBAR RESPONSIVA */
     .navbar-wrapper {
       background-color: #932d2f;
       display: flex;
@@ -192,6 +192,50 @@
         margin: 5px 0;
       }
     }
+
+    /* DROPDOWN MENU */
+    .dropdown {
+      position: relative;
+      cursor: pointer;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #1e1e1e;
+      border: 2px solid #fff;
+      border-radius: 8px;
+      padding: 8px;
+      top: 28px;
+      left: 0;
+      z-index: 999;
+      font-size: 10px;
+      font-family: 'Press Start 2P', monospace;
+      box-shadow: 0 0 10px #c00;
+    }
+
+    .dropdown-content a {
+      display: block;
+      color: white;
+      padding: 6px 10px;
+      text-decoration: none;
+      transition: background-color 0.2s ease;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #fff;
+      color: #000;
+    }
+
+    .seta-retro {
+      margin-left: 6px;
+      animation: piscar-seta 3s steps(1) infinite;
+    }
+
+    @keyframes piscar-seta {
+      0%, 50% { opacity: 1; }
+      51%, 100% { opacity: 0; }
+    }
   </style>
 </head>
 <body>
@@ -208,7 +252,13 @@
         <div class="separator"></div>
         <a href="#" class="nav-item">Professores</a>
         <div class="separator"></div>
-        <a href="calculadora.html" class="nav-item">Outros</a>
+        <div class="nav-item dropdown" id="dropdown-others">
+          Outros<span class="seta-retro">▼</span>
+          <div class="dropdown-content">
+            <a href="calculadora.html">Calculadora</a>
+            <a href="tcc.html">TCC</a>
+          </div>
+        </div>
       </nav>
     </div>
 
@@ -266,6 +316,33 @@
     score.className = 'score-label';
     score.textContent = `SCORE: ${linhas.length.toString().padStart(2, '0')}`;
     container.appendChild(score);
+  </script>
+
+  <script>
+    const dropdown = document.getElementById("dropdown-others");
+    const dropdownContent = dropdown.querySelector(".dropdown-content");
+    let hideTimeout;
+
+    dropdown.addEventListener("mouseenter", () => {
+      clearTimeout(hideTimeout);
+      dropdownContent.style.display = "block";
+    });
+
+    dropdown.addEventListener("mouseleave", () => {
+      hideTimeout = setTimeout(() => {
+        dropdownContent.style.display = "none";
+      }, 200);
+    });
+
+    dropdownContent.addEventListener("mouseenter", () => {
+      clearTimeout(hideTimeout);
+    });
+
+    dropdownContent.addEventListener("mouseleave", () => {
+      hideTimeout = setTimeout(() => {
+        dropdownContent.style.display = "none";
+      }, 2000);
+    });
   </script>
 </body>
 </html>
