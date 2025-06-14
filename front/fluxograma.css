@@ -94,11 +94,12 @@ main.fluxograma {
   background-color: #555;
 }
 
-.disciplina.comum { background-color: #80c0c0; color: #000; }
-.disciplina.cc    { background-color: #60a996; color: #000; }
-.disciplina.prog  { background-color: #f5b261; color: #000; }
-.disciplina.base  { background-color: #f2968f; color: #000; }
-.disciplina.eletiva { background-color: #b289f0; color: #000; }
+.disciplina.comum { background-color: #60A996; color: #000; }
+.disciplina.cc    { background-color: #7DBCDB; color: #000; }
+.disciplina.prog  { background-color: #E9C281; color: #000; }
+.disciplina.base  { background-color: #D5835B; color: #000; }
+.disciplina.eletiva { background-color: #918ABD; color: #000; }
+.disciplina.tcc { background-color: #EEDC5E; color: #000; }
 
 .highlight {
   box-shadow: 0 0 15px 5px #ffd700;
@@ -128,11 +129,11 @@ footer {
   font-weight: bold;
 }
 
-.legenda .comum { background-color: #80c0c0; }
-.legenda .cc { background-color: #60a996; }
-.legenda .prog { background-color: #f5b261; }
-.legenda .base { background-color: #f2968f; }
-.legenda .eletiva { background-color: #b289f0; }
+.legenda .comum { background-color: #60A996; }
+.legenda .cc { background-color: #7DBCDB; }
+.legenda .prog { background-color: #E9C281; }
+.legenda .base { background-color: #D5835B; }
+.legenda .eletiva { background-color: #918ABD; }
 
 @media screen and (max-width: 600px) {
   .disciplina {
