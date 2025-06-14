@@ -47,11 +47,6 @@ body {
   color: #000000;
 }
 
-.nav-item.active {
-  font-weight: bold;
-  color: #ffcc00;
-}
-
 .separator {
   width: 1px;
   height: 18px;
