@@ -9,22 +9,41 @@
   <style>
     * { box-sizing: border-box; }
 
-    body {
+    html, body {
+      height: 100%;
       margin: 0;
-      background-color: black;
-      color: white;
-      font-family: 'Press Start 2P', monospace;
-      background: radial-gradient(circle, #1a1a1a, #000000);
-      overflow-x: hidden;
+      padding: 0;
     }
 
+    body {
+      background-color: #000;
+      background-image: url("img/background.png");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      background-attachment: fixed;
+      font-family: 'Press Start 2P', cursive;
+      color: #fff;
+    }
+
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.85);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+
     .navbar-wrapper {
-      background-color: #ff0000;
+      background-color: #932d2f;
       display: flex;
       justify-content: center;
-      padding: 10px 0;
+      padding: 8px 0;
+      width: 100%;
       box-shadow: 0 4px 0 #1e1e1e;
-      border-bottom: 4px double white;
+      z-index: 1000;
+      position: sticky;
+      top: 0;
     }
 
     .navbar-responsive {
@@ -38,7 +57,8 @@
     }
 
     .nav-item {
-      font-size: 10px;
+      font-family: "Press Start 2P", Helvetica, sans-serif;
+      font-size: 12px;
       color: white;
       text-decoration: none;
       transition: transform 0.3s ease;
@@ -47,7 +67,7 @@
 
     .nav-item:hover {
       transform: scale(1.1);
-      color: yellow;
+      color: #000000;
     }
 
     .separator {
@@ -62,7 +82,7 @@
       align-items: center;
       padding: 60px 20px;
       min-height: calc(100vh - 80px);
-      background: repeating-linear-gradient(45deg, #1a1a1a, #1a1a1a 10px, #111 10px, #111 20px);
+      
     }
 
     .arcade-container {
@@ -283,12 +303,10 @@
     }
 
     footer {
+      padding: 30px 0;
+      background-color: #111;
+      border-top: 4px dotted #c00;
       text-align: center;
-      font-size: 9px;
-      padding: 20px;
-      color: #aaa;
-      border-top: 2px solid #ff0000;
-      background: #1e1e1e;
     }
 
     @media (max-width: 768px) {
@@ -300,23 +318,30 @@
         margin-top: 30px;
       }
     }
+
+    @keyframes blinkStart {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+
   </style>
 </head>
 <body>
 
-  <div class="navbar-wrapper">
-    <nav class="navbar-responsive">
-      <a href="home-page.html" class="nav-item">Início</a>
-      <div class="separator"></div>
-      <a href="calendario.html" class="nav-item">Calendário</a>
-      <div class="separator"></div>
-      <a href="fluxograma.html" class="nav-item">Fluxograma</a>
-      <div class="separator"></div>
-      <a href="professores.html" class="nav-item">Professores</a>
-      <div class="separator"></div>
-      <a href="#" class="nav-item">Outros</a>
-    </nav>
-  </div>
+  <div class="overlay">
+    <div class="navbar-wrapper">
+      <nav class="navbar-responsive">
+        <a href="home-page.html" class="nav-item">Início</a>
+        <div class="separator"></div>
+        <a href="calendario.html" class="nav-item">Calendário</a>
+        <div class="separator"></div>
+        <a href="fluxograma.html" class="nav-item">Fluxograma do Curso</a>
+        <div class="separator"></div>
+        <a href="professores.html" class="nav-item">Professores</a>
+        <div class="separator"></div>
+        <a href="#" class="nav-item">Outros</a>
+      </nav>
+    </div>
 
   <main>
     <div class="arcade-container">
@@ -354,9 +379,22 @@
   </main>
 
   <footer>
-    © 2025 - Curso de Computação UEPB - Calculadora Arcade Retrô
-  </footer>
-
+  <div style="display: flex; flex-direction: column; align-items: center; gap: 12px;">
+    <div style="font-family: 'Press Start 2P', monospace; font-size: 12px; color: #ff0000; text-shadow: 2px 2px #000;">
+      ★ DESAFIO DA NOTA FINAL ★
+    </div>
+    <div style="font-family: 'Press Start 2P', monospace; font-size: 10px; color: white; text-shadow: 1px 1px #932d2f;">
+      1 COIN = 1 TENTATIVA
+    </div>
+    <div style="font-family: 'Press Start 2P', monospace; font-size: 10px; color: #00ff00; text-shadow: 1px 1px #000;">
+      SCORE: 0000000
+    </div>
+    <div style="font-family: 'Press Start 2P', monospace; font-size: 9px; color: #fff; text-shadow: 0 0 6px #ff0000; animation: blinkStart 2s infinite;">
+      >>> PRESS INSERT COIN TO START <<<
+    </div>
+  </div>
+</footer>
+  </div>
   <script>
     let nota1 = null;
     let nota2 = null;
@@ -392,7 +430,7 @@
         }
 
         const mediaAtual = (nota1 + nota2) / 2;
-        const notaNecessaria = Math.max(0, 21 - (nota1 + nota2));
+        const notaNecessaria = 12.5 - (1.5 * mediaAtual);
 
         if (mediaAtual >= 7) {
           updateScreen("Você já passou! 🏆");
