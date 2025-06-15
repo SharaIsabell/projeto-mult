@@ -2,17 +2,28 @@ html, body {
   height: 100%;
   margin: 0;
   padding: 0;
-  font-family:"Press Start 2P", Helvetica;
-  font-size: small;
-  background-color: #1e1e1e;
-  color: white;
-  overflow-x: hidden;
+  background-color: #000;
+  background-image: url("img/background.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  font-family: 'Press Start 2P', cursive;
+  color: #fff;
 }
 
 body {
   display: flex;
   flex-direction: column;
 }
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.85);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
 
 header {
   background-color: #932d2f;
@@ -107,18 +118,26 @@ main.fluxograma {
 }
 
 footer {
+  padding: 15px;
+  background-color: #111;
+  border-top: 4px dotted #c00;
   text-align: center;
-  padding: 20px;
-  background-color: #932d2f;
   margin-top: auto;
 }
 
+.hud-line {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
 .legenda {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 15px;
-  margin-top: 10px;
+  margin-top: 5px;
 }
 
 .legenda span {
@@ -193,4 +212,98 @@ footer {
 @keyframes piscar-seta {
   0%, 50% { opacity: 1; }
   51%, 100% { opacity: 0; }
+}
+
+.navbar-wrapper {
+  background-color: #932d2f;
+  display: flex;
+  justify-content: center;
+  padding: 8px 0;
+  width: 100%;
+  box-shadow: 0 4px 0 #1e1e1e;
+  z-index: 1000;
+  position: sticky;
+  top: 0;
+}
+
+.navbar-responsive {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  max-width: 1060px;
+  width: 90%;
+}
+
+.nav-item {
+  font-family: "Press Start 2P", Helvetica, sans-serif;
+  font-size: 12px;
+  color: white;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+  white-space: nowrap;
+}
+
+.nav-item:hover {
+  transform: scale(1.1);
+  color: #000000;
+}
+
+.separator {
+  width: 1px;
+  height: 18px;
+  background-color: white;
+}
+
+.barra-carregamento-retro {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.barra-externa {
+  display: inline-block;
+  width: 240px;
+  height: 18px;
+  background-color: #222;
+  border: 3px solid #c00;
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+}
+
+.barra-interna {
+  width: 0%;
+  height: 100%;
+  background: repeating-linear-gradient(
+    -45deg,
+    #ff0000,
+    #ff0000 10px,
+    #8d8d8d 10px,
+    #8d8d8d 20px
+  );
+  animation: carregandoRetro 6s linear infinite;
+}
+
+@keyframes carregandoRetro {
+  0%   { width: 0%; }
+  25%  { width: 30%; }
+  50%  { width: 60%; }
+  75%  { width: 90%; }
+  100% { width: 100%; }
+}
+
+.texto-loading {
+  display: block;
+  margin-top: 8px;
+  color: #ff0000;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 10px;
+  letter-spacing: 2px;
+  animation: piscarLoading 2s steps(1) infinite;
+}
+
+@keyframes piscarLoading {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
 }
