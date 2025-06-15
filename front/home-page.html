@@ -79,14 +79,33 @@
           <div class="text-wrapper-3">É novo no curso?</div>
           <div class="retangulo-menu"></div>
           <div class="retangulo-menu-2"></div>
-          <img class="icone-instagram" src="img/iconeinstagram.png" />
-          <img class="icone-telegram" src="img/iconetelegram.png" />
-          <img class="icone-email" src="img/iconeemail.png" />
+          
+          <div class="icone-contato icone-email-pos" id="copiar-email" style="cursor: pointer;">
+            <img class="icone-email" src="img/iconeemail.png" alt="E-mail" />
+          </div>
+          
+          <a href="https://www.instagram.com/compuepb/" target="_blank" rel="noopener noreferrer">
+            <img class="icone-instagram" src="img/iconeinstagram.png" alt="Instagram" />
+          </a>
+
+          <a href="https://t.me/+OmR1fzcJXSoxZDkx" target="_blank" rel="noopener noreferrer">
+            <img class="icone-telegram" src="img/iconetelegram.png" alt="Telegram" />
+          </a>
 
           <a href="https://uepb.edu.br/" target="_blank" class="botao-retro-uepb">
             <span class="texto-retro">► SITE UEPB ◄</span>
           </a>
 
+          <div class="sessao-video-retro">
+            <div class="titulo-video">VÍDEO INTRODUTÓRIO</div>
+            <div class="container-video">
+              <iframe width="700" height="350" src="https://www.youtube.com/embed/yXSsPnDUxIY" 
+                title="História da UEPB contada por professores que ajudaram a construir" frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+              </iframe>
+            </div>
+          </div>
 
           <div class="mascote">
             <img class="comp" src="img/comp1-1.png" />
@@ -98,7 +117,9 @@
             </div>
           </div>
     </div>
-  
+
+    <div id="notificacao-copiado" class="notificacao-copiado">Copiado para a área de transferência!</div>
+
   <!-- Script do mascote -->
   <script>
     const caixaDialogo = document.getElementById("caixa-dialogo");
@@ -193,6 +214,29 @@
       hideTimeout = setTimeout(() => {
         dropdownContent.style.display = "none";
       }, 2000);
+    });
+  </script>
+
+  <script>
+    window.addEventListener("DOMContentLoaded", () => {
+      const botaoEmail = document.getElementById("copiar-email");
+      const notificacao = document.getElementById("notificacao-copiado");
+
+      botaoEmail.addEventListener("click", () => {
+        const email = "coord.computacao.cct@setor.uepb.edu.br";
+
+        navigator.clipboard.writeText(email).then(() => {
+          // Mostra a notificação
+          notificacao.classList.add("mostrar");
+
+          // Esconde após 2 segundos
+          setTimeout(() => {
+            notificacao.classList.remove("mostrar");
+          }, 2000);
+        }).catch(err => {
+          console.error("Erro ao copiar:", err);
+        });
+      });
     });
   </script>
 </body>
