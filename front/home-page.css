@@ -1,11 +1,7 @@
-/* Fundo estilo retro com overlay */
 html, body {
   height: 100%;
   margin: 0;
   padding: 0;
-}
-
-body {
   background-color: #000;
   background-image: url("img/background.png");
   background-repeat: no-repeat;
@@ -14,13 +10,21 @@ body {
   background-attachment: fixed;
   font-family: 'Press Start 2P', cursive;
   color: #fff;
+  position: relative;
+  z-index: 0;
 }
 
-.overlay {
-  background-color: rgba(0, 0, 0, 0.85);
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+/* Overlay por cima do fundo */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.85); /* ajuste a opacidade e cor aqui */
+  z-index: -1;
+  pointer-events: none;
 }
 
 /* PÁGINA INICIAL */
@@ -31,24 +35,16 @@ body {
 }
 
 .pgina-inicial .overlap-wrapper {
-  overflow: hidden;
   width: 100%;
-  height: auto;
+  max-width: 1200px;
   margin: 0 auto;
+  overflow: visible; /* antes estava "hidden", o que esconde conteúdo extra */
 }
 
 .pgina-inicial .overlap {
-  position: relative;
-  width: 100%;
-  height: 1245px;
-}
 
-.pgina-inicial .background {
-  position: absolute;
   width: 100%;
-  height: auto;
-  top: 0;
-  left: 0;
+  min-height: 100vh; /* cresce com o conteúdo se for maior que a tela */
 }
 
 .pgina-inicial .borda-vermelha {
@@ -82,27 +78,6 @@ body {
   object-fit: cover;
 }
 
-.pgina-inicial .retangulo-degrade {
-  position: absolute;
-  width: 100%;
-  height: 707px;
-  top: 477px;
-  left: 0;
-  background: linear-gradient(180deg, rgba(147, 45, 47, 1) 0%, rgba(30, 30, 30, 1) 84%);
-}
-
-.pgina-inicial .linha-vermelha,
-.pgina-inicial .linha-branca {
-  position: absolute;
-  width: 100vw;
-  height: 11px;
-  left: 0;
-  object-fit: cover;
-  z-index: 1;
-}
-
-.pgina-inicial .linha-vermelha { top: 469px; }
-.pgina-inicial .linha-branca { top: 478px; }
 
 .pgina-inicial .retangulo-branco {
   position: absolute;
@@ -111,9 +86,12 @@ body {
   top: 570px;
   left: 50%;
   transform: translateX(-50%);
-  background-color: #ffffff;
-  border-radius: 20px;
+  background-color: #1e1e1e; /* fundo escuro em vez de branco */
+  border: 4px double #ff0000; /* borda dupla vermelha */
+  box-shadow: 0 0 12px #ff0000; /* brilho neon */
+  border-radius: 8px; /* cantos discretamente arredondados */
 }
+
 
 .pgina-inicial .formul-rio-de,
 .pgina-inicial .div {
@@ -123,7 +101,7 @@ body {
   transform: translateX(-50%);
   font-family: "Press Start 2P", Helvetica;
   font-weight: 400;
-  color: #1e1e1e;
+  color: #ffffff;
   font-size: 12px;
   letter-spacing: 0;
   line-height: normal;
@@ -134,12 +112,13 @@ body {
 
 .pgina-inicial .text-wrapper {
   text-decoration: underline;
+  color: #932d2ffc;
 }
 
 .pgina-inicial .span {
   font-family: "Press Start 2P", Helvetica;
   font-weight: 400;
-  color: #1e1e1e;
+  color: #ffffff;
   font-size: 12px;
 }
 
@@ -151,7 +130,7 @@ body {
   transform: translateX(-50%);
   font-family: "Press Start 2P", Helvetica;
   font-weight: 400;
-  color: #1e1e1e;
+  color: #ffffff;
   font-size: 20px;
   line-height: normal;
   white-space: nowrap;
@@ -265,7 +244,7 @@ body {
   align-items: flex-start;
   gap: 10px;
   position: absolute;
-  top: 752px;
+  top: 700px;
   left: 85%;
   transform: translateX(-50%);
 }
@@ -468,3 +447,30 @@ body {
   0%, 50% { opacity: 1; }
   51%, 100% { opacity: 0; }
 }
+
+.botao-retro-uepb {
+  display: inline-block;
+  background-color: #1e1e1e;
+  border: 4px double #ff0000;
+  padding: 14px 24px;
+  text-decoration: none;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 14px;
+  color: #fff;
+  text-align: center;
+  box-shadow: 0 0 12px #ff0000;
+  transition: all 0.2s ease;
+  border-radius: 8px;
+  position: absolute;
+  top: 1040px; /* mesmo valor anterior */
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.botao-retro-uepb:hover {
+  background-color: #ff0000;
+  color: #000;
+  box-shadow: 0 0 20px #ff0000;
+  cursor: pointer;
+}
+
