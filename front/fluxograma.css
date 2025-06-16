@@ -307,3 +307,106 @@ footer {
   0%, 100% { opacity: 1; }
   50% { opacity: 0; }
 }
+
+.mascote {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  margin: 40px;
+}
+
+.dialogo-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.caixa-dialogo {
+  background-color: #000000;
+  color: #00FF00;
+  border: 2px solid #00FF00;
+  padding: 20px;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 14px;
+  width: 520px;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  z-index: 10;
+  border-radius: 6px;
+  pointer-events: none;
+  line-height: 1.8;
+}
+
+.caixa-dialogo.mostrar {
+  opacity: 1;
+}
+
+.caixa-opcoes {
+  background-color: #000;
+  border: 2px solid #00FF00;
+  padding: 16px;
+  box-shadow: 0 0 15px #00FF00;
+  width: 520px;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  border-radius: 6px;
+  z-index: 9;
+}
+
+.caixa-opcoes.mostrar {
+  opacity: 1;
+}
+
+.opcoes {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.botao-opcao {
+  background-color: #000;
+  color: #00FF00;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 13px;
+  padding: 10px;
+  border: 1px solid #00FF00;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-align: left;
+}
+
+.botao-opcao:hover {
+  background-color: #00FF00;
+  color: #000;
+}
+
+.botao-retro-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: -300px;
+  margin-bottom: 190px;
+  width: 100%;
+  padding-right: 680px;
+  z-index: 10; 
+}
+
+.retro-button {
+  background-color: #000;
+  color: #ff0000;
+  border: 3px solid #ff0000;
+  padding: 1rem;
+  font-size: 10px;
+  cursor: pointer;
+  text-decoration: none;
+  box-shadow: 3px 3px #fff;
+  width: 200px;
+  text-align: center;
+  transition: all 0.2s ease-in-out;
+}
+
+.retro-button:hover {
+  background-color: #ff0000;
+  color: #000;
+  box-shadow: 3px 3px #fff inset;
+}

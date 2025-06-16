@@ -7,7 +7,20 @@
   <link rel="stylesheet" href="globals.css" />
   <link rel="stylesheet" href="styleguide.css" />
   <link rel="stylesheet" href="fluxograma.css" />
+  <style>
+    .texto.digitando::after {
+      content: '█';
+      animation: blink 1s steps(1) infinite;
+      margin-left: 4px;
+    }
+
+    @keyframes blink {
+      0%, 50% { opacity: 1; }
+      51%, 100% { opacity: 0; }
+    }
+  </style>
 </head>
+
 <body>
   <div class="overlay">
   <div class="navbar-wrapper">
@@ -30,8 +43,25 @@
     </nav>
   </div>
 
-
   <main class="fluxograma">
+
+    <div class="mascote">
+      <img class="comp" src="img/comp4-1.png" />
+      <div class="dialogo-container">
+        <div class="caixa-dialogo" id="caixa-dialogo">
+          <div class="texto" id="texto-dialogo"></div>
+        </div>
+        <div class="caixa-opcoes" id="caixa-opcoes">
+          <div class="opcoes" id="opcoes-dialogo"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="botao-retro-wrapper">
+      <a href="https://drive.google.com/file/d/1nWoB5RBmgUAKgpxcqtuffVkiPe4GSYia/view" target="_blank" class="retro-button">PPC - Campus I</a>
+    </div>
+
+
     <!-- 1º Semestre -->
     <section class="semestre" id="semestre-1">
       <h2>1º Semestre</h2>
@@ -185,30 +215,68 @@
   </script>
 
   <script>
-    const dropdown = document.getElementById("dropdown-others");
-    const dropdownContent = dropdown.querySelector(".dropdown-content");
-    let hideTimeout;
+  const caixaDialogo = document.getElementById("caixa-dialogo");
+  const textoDialogo = document.getElementById("texto-dialogo");
+  const caixaOpcoes = document.getElementById("caixa-opcoes");
+  const opcoesDialogo = document.getElementById("opcoes-dialogo");
 
-    dropdown.addEventListener("mouseenter", () => {
-      clearTimeout(hideTimeout);
-      dropdownContent.style.display = "block";
-    });
+  let intervalo;
 
-    dropdown.addEventListener("mouseleave", () => {
-      hideTimeout = setTimeout(() => {
-        dropdownContent.style.display = "none";
-      }, 200);
-    });
+  function digitarTexto(texto, callback) {
+    textoDialogo.textContent = "";
+    textoDialogo.classList.add("digitando");
+    let index = 0;
+    clearInterval(intervalo);
+    opcoesDialogo.innerHTML = "";
+    caixaOpcoes.classList.remove("mostrar");
 
-    dropdownContent.addEventListener("mouseenter", () => {
-      clearTimeout(hideTimeout);
-    });
+    intervalo = setInterval(() => {
+      if (index < texto.length) {
+        textoDialogo.textContent += texto.charAt(index);
+        index++;
+      } else {
+        clearInterval(intervalo);
+        if (callback) callback();
+      }
+    }, 40);
+  }
 
-    dropdownContent.addEventListener("mouseleave", () => {
-      hideTimeout = setTimeout(() => {
-        dropdownContent.style.display = "none";
-      }, 2000);
+
+  function mostrarOpcoes(opcoes) {
+    opcoesDialogo.innerHTML = "";
+    opcoes.forEach(opcao => {
+      const botao = document.createElement("button");
+      botao.className = "botao-opcao";
+      botao.textContent = opcao.texto;
+      botao.onclick = () => {
+        caixaOpcoes.classList.remove("mostrar");
+
+        digitarTexto(opcao.resposta, () => {
+          // Após exibir a resposta, espera 4 segundos e reinicia o diálogo
+          setTimeout(() => {
+            iniciarDialogoMascote();
+          }, 4000);
+        });
+      };
+      opcoesDialogo.appendChild(botao);
     });
-  </script>
+    caixaOpcoes.classList.add("mostrar");
+  }
+
+
+  function iniciarDialogoMascote() {
+    caixaDialogo.classList.add("mostrar");
+    digitarTexto("Olá! Eu sou Piuter, o mascote do site de Computação. Como posso te ajudar?", () => {
+      mostrarOpcoes([
+        { texto: "Sobre a página", resposta: "Esta é a página de fluxograma do curso de Computação. Aqui você encontra as disciplinas, suas ementas e os pré-requisitos de cada uma." },
+        { texto: "Como vejo os pré-requisitos?", resposta: "Passe o cursor do mouse sobre uma disciplina para destacar as que dependem dela como pré-requisito." },
+        { texto: "Como vejo a ementa?", resposta: "Clique sobre o nome de uma disciplina para acessar sua ementa. Se preferir, use o botão PPC para visualizar o Projeto Pedagógico do Curso completo." }
+      ]);
+    });
+  }
+
+  window.addEventListener("DOMContentLoaded", iniciarDialogoMascote);
+</script>
+
 </body>
 </html>
