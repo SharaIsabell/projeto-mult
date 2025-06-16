@@ -113,7 +113,7 @@ main.fluxograma {
 .disciplina.tcc { background-color: #EEDC5E; color: #000; }
 
 .highlight {
-  box-shadow: 0 0 15px 5px #ffd700;
+  box-shadow: 0 0 15px 5px #fff;
   transition: box-shadow 0.3s ease-in-out;
 }
 
