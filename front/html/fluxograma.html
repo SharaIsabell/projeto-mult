@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fluxograma do Curso</title>
+  <link rel="stylesheet" href="/front/css/globals.css" />
+  <link rel="stylesheet" href="/front/css/styleguide.css" />
+  <link rel="stylesheet" href="/front/css/fluxograma.css" />
+  <style>
+    .texto.digitando::after {
+      content: '█';
+      animation: blink 1s steps(1) infinite;
+      margin-left: 4px;
+    }
+
+    @keyframes blink {
+      0%, 50% { opacity: 1; }
+      51%, 100% { opacity: 0; }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="overlay">
+  <div class="navbar-wrapper">
+    <nav class="navbar-responsive">
+      <a href="../../index.html" class="nav-item">Página Inicial</a>
+      <div class="separator"></div>
+      <a href="/front/html/calendario.html" class="nav-item">Calendário Acadêmico</a>
+      <div class="separator"></div>
+      <a href="/front/html/fluxograma.html" class="nav-item">Fluxograma do Curso</a>
+      <div class="separator"></div>
+      <a href="/front/html/professores.html" class="nav-item">Professores</a>
+      <div class="separator"></div>
+      <div class="nav-item dropdown" id="dropdown-others">
+        Outros<span class="seta-retro">▼</span>
+        <div class="dropdown-content">
+          <a href="/front/html/calculadora.html">Calculadora</a>
+          <a href="/front/html/tcc.html">TCC</a>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <main class="fluxograma">
+
+    <div class="mascote">
+      <img class="comp" src="../img/comp4-1.png" />
+      <div class="dialogo-container">
+        <div class="caixa-dialogo" id="caixa-dialogo">
+          <div class="texto" id="texto-dialogo"></div>
+        </div>
+        <div class="caixa-opcoes" id="caixa-opcoes">
+          <div class="opcoes" id="opcoes-dialogo"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="botao-retro-wrapper">
+      <a href="https://drive.google.com/file/d/1nWoB5RBmgUAKgpxcqtuffVkiPe4GSYia/view" target="_blank" class="retro-button">PPC - Campus I</a>
+    </div>
+
+
+    <!-- 1º Semestre -->
+    <section class="semestre" id="semestre-1">
+      <h2>1º Semestre</h2>
+      <div class="disciplinas">
+        <div class="caixa" id="etica"><a class="disciplina comum" href="../ementas/etica-computacao.html">Ética em Computação (30H)</a></div>
+        <div class="caixa" id="metodologia"><a class="disciplina comum" href="../ementas/metodologia.html">Metodologia Científica (60H)</a></div>
+        <div class="caixa" id="portugues"><a class="disciplina comum" href="../ementas/portugues.html">Português Instrumental (30H)</a></div>
+        <div class="caixa" id="introducao"><a class="disciplina cc" href="../ementas/introducao.html">Introdução à Computação (60H)</a></div>
+        <div class="caixa" id="logica"><a class="disciplina cc" href="../ementas/logica.html">Lógica para Computação (60H)</a></div>
+        <div class="caixa" id="discreta1"><a class="disciplina cc" href="../ementas/matematica-discreta-i.html">Matemática Discreta I (60H)</a></div>
+        <div class="caixa" id="algoritmos"><a class="disciplina prog" href="../ementas/algoritmos.html">Algoritmos (60H)</a></div>
+      </div>
+    </section>
+
+    <!-- 2º Semestre -->
+    <section class="semestre" id="semestre-2">
+      <h2>2º Semestre</h2>
+      <div class="disciplinas">
+        <div class="caixa" id="calculo1"><a class="disciplina comum" href="../ementas/calculo1.html">Cálculo Diferencial e Integral I (60H)</a></div>
+        <div class="caixa" id="geometria"><a class="disciplina comum" href="../ementas/geometria.html">Vetores e Geometria Analítica (60H)</a></div>
+        <div class="caixa" id="ingles"><a class="disciplina comum" href="../ementas/ingles.html">Inglês Instrumental (30H)</a></div>
+        <div class="caixa" id="tecnologia"><a class="disciplina comum" href="../ementas/tecnologia.html">Tecnologia, Ciência e Sociedade (30H)</a></div>
+        <div class="caixa" id="discreta2"><a class="disciplina cc" href="../ementas/matematica-discreta-ii.html">Matemática Discreta II (60H)</a></div>
+        <div class="caixa" id="linguagem1"><a class="disciplina prog" href="../ementas/linguagem1.html">Linguagem de Programação I (60H)</a></div>
+        <div class="caixa" id="labprog1"><a class="disciplina prog" href="../ementas/labprog1.html">Laboratório de Programação I (60H)</a></div>
+      </div>
+    </section>
+
+    <!-- 3º Semestre -->
+    <section class="semestre" id="semestre-3">
+      <h2>3º Semestre</h2>
+      <div class="disciplinas">
+        <div class="caixa" id="calculo2-novo"><a class="disciplina comum" href="../ementas/calculo2.html">Cálculo Diferencial e Integral II (60H)</a></div>
+        <div class="caixa" id="algebra-linear1"><a class="disciplina comum" href="../ementas/algebra-linear1.html">Álgebra Linear I (60H)</a></div>
+        <div class="caixa" id="orga-arquitetura"><a class="disciplina cc" href="../ementas/org-arquitetura.html">Org. e Arq. de Computadores (60H)</a></div>
+        <div class="caixa" id="lab-org-arq"><a class="disciplina cc" href="../ementas/lab-org-arq.html">Lab. Org. e Arq. de Computadores (60H)</a></div>
+        <div class="caixa" id="calculo-numerico"><a class="disciplina cc" href="../ementas/calculo-numerico.html">Cálculo Numérico (60H)</a></div>
+        <div class="caixa" id="linguagem2"><a class="disciplina prog" href="../ementas/linguagem2.html">Linguagem de Programação II (60H)</a></div>
+        <div class="caixa" id="labprog2"><a class="disciplina prog" href="../ementas/labprog2.html">Laboratório de Programação II (60H)</a></div>
+      </div>
+    </section>
+
+    <!-- 4º Semestre -->
+    <section class="semestre" id="semestre-4">
+      <h2>4º Semestre</h2>
+      <div class="disciplinas">
+        <div class="caixa" id="prob-estatistica"><a class="disciplina comum" href="../ementas/prob-estatistica.html">Prob. e Estatística (60H)</a></div>
+        <div class="caixa" id="calculo3"><a class="disciplina comum" href="../ementas/calculo3.html">Cálculo Diferencial e Integral III (60H)</a></div>
+        <div class="caixa" id="analise-sistemas"><a class="disciplina base" href="../ementas/analise-sistemas.html">Análise e Projeto de Sistemas (60H)</a></div>
+        <div class="caixa" id="linguagens-formais"><a class="disciplina cc" href="../ementas/linguagens-formais.html">Ling. Formais e Teoria da Computação (60H)</a></div>
+        <div class="caixa" id="interfaces-graficas"><a class="disciplina prog" href="../ementas/interfaces-graficas.html">Tec. de Desenv. de Interface Gráfica (60H)</a></div>
+        <div class="caixa" id="estrutura-dados"><a class="disciplina prog" href="../ementas/estrutura-dados.html">Estrutura de Dados (60H)</a></div>
+        <div class="caixa" id="lab-estrutura-dados"><a class="disciplina prog" href="../ementas/lab-estrutura-dados.html">Lab. de Estrutura de Dados (60H)</a></div>
+      </div>
+    </section>
+
+    <!-- 5º Semestre -->
+    <section class="semestre" id="semestre-5">
+      <h2>5º Semestre</h2>
+      <div class="disciplinas">
+        <div class="caixa" id="prob-estatistica2"><a class="disciplina comum" href="../ementas/prob-estatistica2.html">Prob. e Estatística II (60H)</a></div>
+        <div class="caixa" id="redes-computadores"><a class="disciplina base" href="../ementas/redes-computadores.html">Redes de Computadores (60H)</a></div>
+        <div class="caixa" id="engenharia-software1"><a class="disciplina base" href="../ementas/engenharia-software1.html">Engenharia de Software I (60H)</a></div>
+        <div class="caixa" id="banco-dados"><a class="disciplina base" href="../ementas/banco-dados.html">Banco de Dados (60H)</a></div>
+        <div class="caixa" id="analise-algoritmos"><a class="disciplina cc" href="../ementas/analise-algoritmos.html">Téc. de Análise de Algoritmo (60H)</a></div>
+        <div class="caixa" id="paradigmas-prog"><a class="disciplina prog" href="../ementas/paradigmas-prog.html">Paradigmas de Programação (60H)</a></div>
+        <div class="caixa" id="metodos-avancados"><a class="disciplina prog" href="../ementas/metodos-avancados.html">Métodos Avançados de Programação (60H)</a></div>
+      </div>
+    </section>
+
+    <!-- 6º Semestre -->
+    <section class="semestre" id="semestre-6">
+      <h2>6º Semestre</h2>
+      <div class="disciplinas">
+        <div class="caixa" id="computacao-grafica"><a class="disciplina base" href="../ementas/computacao-grafica.html">Computação Gráfica (60H)</a></div>
+        <div class="caixa" id="sistemas-operacionais"><a class="disciplina base" href="../ementas/sistemas-operacionais.html">Sistemas Operacionais (60H)</a></div>
+        <div class="caixa" id="seguranca-redes"><a class="disciplina base" href="../ementas/seguranca-redes.html">Interconexão e Segurança de Redes de Computadores (60H)</a></div>
+        <div class="caixa" id="engenharia-software2"><a class="disciplina base" href="../ementas/engenharia-software2.html">Engenharia de Software II (60H)</a></div>
+        <div class="caixa" id="gerencia-projetos"><a class="disciplina base" href="../ementas/gerencia-projetos.html">Gerência de Projeto (60H)</a></div>
+        <div class="caixa" id="inteligencia-artificial"><a class="disciplina base" href="../ementas/inteligencia-artificial.html">Inteligência Artificial (60H)</a></div>
+      </div>
+    </section>
+
+    <!-- 7º Semestre -->
+    <section class="semestre" id="semestre-7">
+      <h2>7º Semestre</h2>
+      <div class="disciplinas">
+        <div class="caixa" id="sistemas-multimidia"><a class="disciplina base" href="../ementas/sistemas-multimidia.html">Sistemas Multimídia (60H)</a></div>
+        <div class="caixa" id="compiladores"><a class="disciplina base" href="../ementas/compiladores.html">Compiladores (60H)</a></div>
+        <div class="caixa" id="ihc"><a class="disciplina base" href="../ementas/ihc.html">Projeto de Interface Homem-Comp. (60H)</a></div>
+        <div class="caixa" id="eletiva1"><a class="disciplina eletiva" href="../ementas/eletiva1.html">Eletiva I (60H)</a></div>
+        <div class="caixa" id="programacao-web"><a class="disciplina prog" href="../ementas/programacao-web.html">Programação WEB (60H)</a></div>
+        <div class="caixa" id="tcc1"><a class="disciplina tcc" href="../ementas/tcc1.html">TCC I (30H)</a></div>
+      </div>
+    </section>
+
+    <!-- 8º Semestre -->
+    <section class="semestre" id="semestre-8">
+      <h2>8º Semestre</h2>
+      <div class="disciplinas">
+        <div class="caixa" id="educacao-distancia"><a class="disciplina comum" href="../ementas/educacao-distancia.html">Educação à Distância (60H)</a></div>
+        <div class="caixa" id="metodos-formais"><a class="disciplina comum" href="../ementas/metodos-formais.html">Métodos Formais (60H)</a></div>
+        <div class="caixa" id="alto-desempenho"><a class="disciplina comum" href="../ementas/alto-desempenho.html">Comp. de Alto Desempenho (60H)</a></div>
+        <div class="caixa" id="eletiva2"><a class="disciplina eletiva" href="../ementas/eletiva2.html">Eletiva II (60H)</a></div>
+        <div class="caixa" id="eletiva3"><a class="disciplina eletiva" href="../ementas/eletiva3.html">Eletiva III (60H)</a></div>
+        <div class="caixa" id="tcc2"><a class="disciplina tcc" href="../ementas/tcc2.html">TCC II (30H)</a></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="legenda hud-line">
+      <span class="legenda comum">Básico Comum</span>
+      <span class="legenda cc">Específico - Ciência da Computação</span>
+      <span class="legenda prog">Específico - Programação</span>
+      <span class="legenda base">Específico - Base Tecnológica</span>
+      <span class="legenda eletiva">Eletivas</span>
+    </div>
+    <div class="barra-carregamento-retro">
+  <div class="barra-externa">
+    <div class="barra-interna"></div>
+  </div>
+  <span class="texto-loading">LOADING...</span>
+</div>
+
+  </footer>
+  </div>
+  <script>
+    const prereqMap = {
+      'discreta1': ['discreta2'],
+      'algoritmos': ['linguagem1', 'labprog1']
+    };
+
+    Object.keys(prereqMap).forEach(prereqId => {
+      const prereqElem = document.getElementById(prereqId);
+
+      prereqElem.addEventListener('mouseenter', () => {
+        prereqMap[prereqId].forEach(targetId => {
+          const targetElem = document.getElementById(targetId);
+          if (targetElem) targetElem.classList.add('highlight');
+        });
+      });
+
+      prereqElem.addEventListener('mouseleave', () => {
+        prereqMap[prereqId].forEach(targetId => {
+          const targetElem = document.getElementById(targetId);
+          if (targetElem) targetElem.classList.remove('highlight');
+        });
+      });
+    });
+  </script>
+
+  <script>
+  const caixaDialogo = document.getElementById("caixa-dialogo");
+  const textoDialogo = document.getElementById("texto-dialogo");
+  const caixaOpcoes = document.getElementById("caixa-opcoes");
+  const opcoesDialogo = document.getElementById("opcoes-dialogo");
+
+  let intervalo;
+
+  function digitarTexto(texto, callback) {
+    textoDialogo.textContent = "";
+    textoDialogo.classList.add("digitando");
+    let index = 0;
+    clearInterval(intervalo);
+    opcoesDialogo.innerHTML = "";
+    caixaOpcoes.classList.remove("mostrar");
+
+    intervalo = setInterval(() => {
+      if (index < texto.length) {
+        textoDialogo.textContent += texto.charAt(index);
+        index++;
+      } else {
+        clearInterval(intervalo);
+        if (callback) callback();
+      }
+    }, 40);
+  }
+
+
+  function mostrarOpcoes(opcoes) {
+    opcoesDialogo.innerHTML = "";
+    opcoes.forEach(opcao => {
+      const botao = document.createElement("button");
+      botao.className = "botao-opcao";
+      botao.textContent = opcao.texto;
+      botao.onclick = () => {
+        caixaOpcoes.classList.remove("mostrar");
+
+        digitarTexto(opcao.resposta, () => {
+          // Após exibir a resposta, espera 4 segundos e reinicia o diálogo
+          setTimeout(() => {
+            iniciarDialogoMascote();
+          }, 4000);
+        });
+      };
+      opcoesDialogo.appendChild(botao);
+    });
+    caixaOpcoes.classList.add("mostrar");
+  }
+
+
+  function iniciarDialogoMascote() {
+    caixaDialogo.classList.add("mostrar");
+    digitarTexto("Olá! Eu sou Piuter, o mascote do site de Computação. Como posso te ajudar?", () => {
+      mostrarOpcoes([
+        { texto: "Sobre a página", resposta: "Esta é a página de fluxograma do curso de Computação. Aqui você encontra as disciplinas, suas ementas e os pré-requisitos de cada uma." },
+        { texto: "Como vejo os pré-requisitos?", resposta: "Passe o cursor do mouse sobre uma disciplina para destacar as que dependem dela como pré-requisito." },
+        { texto: "Como vejo a ementa?", resposta: "Clique sobre o nome de uma disciplina para acessar sua ementa. Se preferir, use o botão PPC para visualizar o Projeto Pedagógico do Curso completo." }
+      ]);
+    });
+  }
+
+  window.addEventListener("DOMContentLoaded", iniciarDialogoMascote);
+</script>
+<script>
+    const dropdown = document.getElementById("dropdown-others");
+    const dropdownContent = dropdown.querySelector(".dropdown-content");
+    let hideTimeout;
+
+    dropdown.addEventListener("mouseenter", () => {
+      clearTimeout(hideTimeout);
+      dropdownContent.style.display = "block";
+    });
+
+    dropdown.addEventListener("mouseleave", () => {
+      hideTimeout = setTimeout(() => {
+        dropdownContent.style.display = "none";
+      }, 200);
+    });
+
+    dropdownContent.addEventListener("mouseenter", () => {
+      clearTimeout(hideTimeout);
+    });
+
+    dropdownContent.addEventListener("mouseleave", () => {
+      hideTimeout = setTimeout(() => {
+        dropdownContent.style.display = "none";
+      }, 2000);
+    });
+  </script>
+</body>
+</html>
