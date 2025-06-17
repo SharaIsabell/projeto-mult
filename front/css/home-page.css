@@ -3,7 +3,7 @@ html, body {
   margin: 0;
   padding: 0;
   background-color: #000;
-  background-image: url("./front/img/background.png");  
+  background-image: url("../img/background.png");  
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -218,7 +218,7 @@ body::before {
   position: relative;
   width: 425px;
   height: 50px;
-  background-image: url(./img/retangulositeuepb.png);
+  background-image: url(../img/retangulositeuepb.png);
   background-size: 100% 100%;
 }
 
