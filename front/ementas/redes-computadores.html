@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Ementa -REDES DE COMPUTADORES</title>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="../css/ementas.css">
+
+</head>
+<body>
+  <div class="computer-wrapper">
+    <div class="monitor-body">
+      <div class="monitor-top">
+        <div class="screen">
+          <div class="content">
+            <h1>BÁSICO ESPECÍFICO DO CURSO</h1>
+            <h2>CPT01036  -REDES DE COMPUTADORES</h2>
+
+ <h3>Ementa</h3>
+<p>
+Introdução aos sistemas de comunicação. Meios de transmissão. Técnicas e dispositivos de transmissão. Modelos de referência OSI/ISO e TCP/IP. Protocolos de Comunicação Camadas TCP/IP: aplicação, transporte, internet e enlace. Introdução aos Sistemas Distribuídos: conceituação, terminologia e principais ideias na área.
+</p>
+
+<h3>Referências</h3>
+
+<p><strong>Básica</strong></p>
+<ul>
+  <li>TANENBAUM, A. <em>Redes de Computadores.</em> Quinta Edição. Editora Campus, 2011.</li>
+  <li>KUROSE, R. <em>Redes de Computadores e a Internet.</em> Sexta Edição. Editora Pearson, 2015.</li>
+</ul>
+
+<p><strong>Complementar</strong></p>
+<ul>
+  <li>MOURA, J. A. B. et al. <em>Redes Locais de Computadores. Protocolos de Alto Nível e Avaliação de Desempenho.</em> McGraw-Hill, 1986.</li>
+  <li>TANENBAUM, A. <em>Distributed Operating Systems.</em> Prentice Hall, Upper Saddle River, New Jersey, 1995.</li>
+  <li>COMER, Douglas. E. <em>Computer Networks and Internets.</em> Prentice-Hall, 1997.</li>
+  <li>FOROUZAN, Behrouz A. <em>Comunicação de Dados e Redes de Computadores.</em> McGraw-Hill, 2008.</li>
+  <li>ALENCAR, M. S. D. <em>Engenharia de Redes de Computadores.</em> Ed. Érica, São Paulo, 2012.</li>
+</ul>
+
+
+
+
+            <a href="../html/fluxograma.html" class="button-back">⮐ Voltar</a>
+          </div>
+        </div>
+      </div>
+      <div class="power-button" title="Clique para ligar/desligar a tela" onclick="togglePower()"></div>
+      <div class="monitor-base"></div>
+      <div class="vent-grid"></div>
+    </div>
+
+    <div class="keyboard-base">
+      <div class="keyboard">
+        <div class="key-row">
+          <div class="key">ESC</div>
+          <div class="key">F1</div>
+          <div class="key">F2</div>
+          <div class="key">F3</div>
+          <div class="key">F4</div>
+          <div class="key">F5</div>
+          <div class="key">F6</div>
+        </div>
+        <div class="key-row">
+          <div class="key">Q</div>
+          <div class="key">W</div>
+          <div class="key">E</div>
+          <div class="key">R</div>
+          <div class="key">T</div>
+          <div class="key">Y</div>
+          <div class="key">U</div>
+          <div class="key">I</div>
+          <div class="key">O</div>
+          <div class="key">P</div>
+        </div>
+        <div class="key-row">
+          <div class="key">A</div>
+          <div class="key">S</div>
+          <div class="key">D</div>
+          <div class="key">F</div>
+          <div class="key">G</div>
+          <div class="key">H</div>
+          <div class="key">J</div>
+          <div class="key">K</div>
+          <div class="key">L</div>
+        </div>
+        <div class="key-row">
+          <div class="key">Z</div>
+          <div class="key">X</div>
+          <div class="key">C</div>
+          <div class="key">V</div>
+          <div class="key">B</div>
+          <div class="key">N</div>
+          <div class="key">M</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function togglePower() {
+      const screen = document.querySelector('.screen');
+      screen.classList.toggle('off');
+    }
+  </script>
+</body>
+</html>

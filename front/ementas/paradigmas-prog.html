@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Ementa -PARADIGMAS DE PROGRAMAÇÃO</title>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="../css/ementas.css">
+
+</head>
+<body>
+  <div class="computer-wrapper">
+    <div class="monitor-body">
+      <div class="monitor-top">
+        <div class="screen">
+          <div class="content">
+            <h1>BÁSICO ESPECÍFICO DO CURSO</h1>
+            <h2>CPT01093  -PARADIGMAS DE PROGRAMAÇÃO</h2>
+
+  <h3>Ementa</h3>
+<p>
+Visão comparativa dos paradigmas de linguagens de programação: imperativo, funcional, lógico, orientado a eventos e orientado a objetos. Noções sobre novos paradigmas. Noções de semântica formal. Aplicações. Teoria de domínios. Teoria de tipos de dados abstratos.
+</p>
+
+<h3>Referências</h3>
+
+<p><strong>Básica</strong></p>
+<ul>
+  <li>SEBESTA, R.W. Conceitos de Linguagens de Programação. Editora Bookman, 2011.</li>
+  <li>PRATT, T. W., ZELKOVITZ, M. Programming Languages: Design and Implementation. 4ª ed. Prentice Hall, 2001. ISBN 0130276782.</li>
+</ul>
+
+<p><strong>Complementar</strong></p>
+<ul>
+  <li>VAREJÃO, F.M. Linguagens de Programação. Editora Campus. 2005. ISBN 8535213171.</li>
+  <li>Watt, D. Programming Language Design Concepts. John Wiley and Sons, 2004.</li>
+</ul>
+
+
+            <a href="../html/fluxograma.html" class="button-back">⮐ Voltar</a>
+          </div>
+        </div>
+      </div>
+      <div class="power-button" title="Clique para ligar/desligar a tela" onclick="togglePower()"></div>
+      <div class="monitor-base"></div>
+      <div class="vent-grid"></div>
+    </div>
+
+    <div class="keyboard-base">
+      <div class="keyboard">
+        <div class="key-row">
+          <div class="key">ESC</div>
+          <div class="key">F1</div>
+          <div class="key">F2</div>
+          <div class="key">F3</div>
+          <div class="key">F4</div>
+          <div class="key">F5</div>
+          <div class="key">F6</div>
+        </div>
+        <div class="key-row">
+          <div class="key">Q</div>
+          <div class="key">W</div>
+          <div class="key">E</div>
+          <div class="key">R</div>
+          <div class="key">T</div>
+          <div class="key">Y</div>
+          <div class="key">U</div>
+          <div class="key">I</div>
+          <div class="key">O</div>
+          <div class="key">P</div>
+        </div>
+        <div class="key-row">
+          <div class="key">A</div>
+          <div class="key">S</div>
+          <div class="key">D</div>
+          <div class="key">F</div>
+          <div class="key">G</div>
+          <div class="key">H</div>
+          <div class="key">J</div>
+          <div class="key">K</div>
+          <div class="key">L</div>
+        </div>
+        <div class="key-row">
+          <div class="key">Z</div>
+          <div class="key">X</div>
+          <div class="key">C</div>
+          <div class="key">V</div>
+          <div class="key">B</div>
+          <div class="key">N</div>
+          <div class="key">M</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function togglePower() {
+      const screen = document.querySelector('.screen');
+      screen.classList.toggle('off');
+    }
+  </script>
+</body>
+</html>

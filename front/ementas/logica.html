@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Ementa -LÓGICA PARA COMPUTAÇÃO</title>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="../css/ementas.css">
+
+</head>
+<body>
+  <div class="computer-wrapper">
+    <div class="monitor-body">
+      <div class="monitor-top">
+        <div class="screen">
+          <div class="content">
+            <h1>BÁSICO ESPECÍFICO DO CURSO</h1>
+            <h2>CPT01007  -LÓGICA PARA COMPUTAÇÃO</h2>
+
+     <h3>EMENTA</h3>
+<p>
+Lógica proposicional: sintaxe, semântica, satisfatibilidade, validade, consequência lógica, formas normais, sistemas dedutivos. Lógica de predicados: sintaxe, semânticas, propriedades semânticas. Programação lógica.
+</p>
+
+<h3>REFERÊNCIAS</h3>
+
+<p><strong>Básica</strong></p>
+<ul>
+  <li>SOUZA, JOÃO NUNUS DE. <i>Lógica para Ciência da Computação: Uma introdução concisa</i>. Rio de Janeiro: Elsevier, 2008.</li>
+  <li>FINGER, MELO E SILVA. <i>Lógica para computação</i>. São Paulo: Thomson Learning, 2006.</li>
+</ul>
+
+<p><strong>Complementar</strong></p>
+<ul>
+  <li>DAGHLIAN, Jacob. <i>Lógica e Álgebra de Boole</i>. São Paulo: Editora Atlas, 1990.</li>
+  <li>GERSTING, JUDITH L. <i>Fundamentos Matemáticos para a Ciência da Computação</i>. Rio de Janeiro: LTC, 2004.</li>
+  <li>NEWTON-SMITH, W. H. <i>Lógica: Um curso introdutório</i>. Lisboa: Gradiva, 1998.</li>
+  <li>GALLIER, JEAN H. <i>Logic for Computer Science : Foundations of Automatic Theorem Proving</i> (Harper & Row Computer Science and Technology Series). New York: John Wiley & Sons, 1987.</li>
+  <li>ENDERTON, H. B. <i>A Mathematical Introduction to Logic</i>. Academic Press, 2001.</li>
+  <li>Chin-Liang Chang & Richard Char-Tung Lee: <i>Symbolic Logic and Mechanical Theorem Proving</i>, Academic Press, 1973.</li>
+  <li>Marco A. Casanova, Fernando Giorno e Antônio L. Furtado: <i>Programação em Lógica</i>, Editora Edgard Blücher, 1987.</li>
+</ul>
+
+
+
+            <a href="../html/fluxograma.html" class="button-back">⮐ Voltar</a>
+          </div>
+        </div>
+      </div>
+      <div class="power-button" title="Clique para ligar/desligar a tela" onclick="togglePower()"></div>
+      <div class="monitor-base"></div>
+      <div class="vent-grid"></div>
+    </div>
+
+    <div class="keyboard-base">
+      <div class="keyboard">
+        <div class="key-row">
+          <div class="key">ESC</div>
+          <div class="key">F1</div>
+          <div class="key">F2</div>
+          <div class="key">F3</div>
+          <div class="key">F4</div>
+          <div class="key">F5</div>
+          <div class="key">F6</div>
+        </div>
+        <div class="key-row">
+          <div class="key">Q</div>
+          <div class="key">W</div>
+          <div class="key">E</div>
+          <div class="key">R</div>
+          <div class="key">T</div>
+          <div class="key">Y</div>
+          <div class="key">U</div>
+          <div class="key">I</div>
+          <div class="key">O</div>
+          <div class="key">P</div>
+        </div>
+        <div class="key-row">
+          <div class="key">A</div>
+          <div class="key">S</div>
+          <div class="key">D</div>
+          <div class="key">F</div>
+          <div class="key">G</div>
+          <div class="key">H</div>
+          <div class="key">J</div>
+          <div class="key">K</div>
+          <div class="key">L</div>
+        </div>
+        <div class="key-row">
+          <div class="key">Z</div>
+          <div class="key">X</div>
+          <div class="key">C</div>
+          <div class="key">V</div>
+          <div class="key">B</div>
+          <div class="key">N</div>
+          <div class="key">M</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function togglePower() {
+      const screen = document.querySelector('.screen');
+      screen.classList.toggle('off');
+    }
+  </script>
+</body>
+</html>

@@ -152,7 +152,7 @@
         <div class="caixa" id="sistemas-multimidia"><a class="disciplina base" href="../ementas/sistemas-multimidia.html">Sistemas Multimídia (60H)</a></div>
         <div class="caixa" id="compiladores"><a class="disciplina base" href="../ementas/compiladores.html">Compiladores (60H)</a></div>
         <div class="caixa" id="ihc"><a class="disciplina base" href="../ementas/ihc.html">Projeto de Interface Homem-Comp. (60H)</a></div>
-        <div class="caixa" id="eletiva1"><a class="disciplina eletiva" href="../ementas/eletiva1.html">Eletiva I (60H)</a></div>
+        <div class="caixa" id="eletiva1"><a class="disciplina eletiva">Eletiva I (60H)</a></div>
         <div class="caixa" id="programacao-web"><a class="disciplina prog" href="../ementas/programacao-web.html">Programação WEB (60H)</a></div>
         <div class="caixa" id="tcc1"><a class="disciplina tcc" href="../ementas/tcc1.html">TCC I (30H)</a></div>
       </div>
@@ -165,8 +165,8 @@
         <div class="caixa" id="educacao-distancia"><a class="disciplina comum" href="../ementas/educacao-distancia.html">Educação à Distância (60H)</a></div>
         <div class="caixa" id="metodos-formais"><a class="disciplina comum" href="../ementas/metodos-formais.html">Métodos Formais (60H)</a></div>
         <div class="caixa" id="alto-desempenho"><a class="disciplina comum" href="../ementas/alto-desempenho.html">Comp. de Alto Desempenho (60H)</a></div>
-        <div class="caixa" id="eletiva2"><a class="disciplina eletiva" href="../ementas/eletiva2.html">Eletiva II (60H)</a></div>
-        <div class="caixa" id="eletiva3"><a class="disciplina eletiva" href="../ementas/eletiva3.html">Eletiva III (60H)</a></div>
+        <div class="caixa" id="eletiva2"><a class="disciplina eletiva" >Eletiva II (60H)</a></div>
+        <div class="caixa" id="eletiva3"><a class="disciplina eletiva">Eletiva III (60H)</a></div>
         <div class="caixa" id="tcc2"><a class="disciplina tcc" href="../ementas/tcc2.html">TCC II (30H)</a></div>
       </div>
     </section>
@@ -192,7 +192,37 @@
   <script>
     const prereqMap = {
       'discreta1': ['discreta2'],
-      'algoritmos': ['linguagem1', 'labprog1']
+      'algoritmos': ['linguagem1', 'labprog1'],
+      'geometria':  ['algebra-linear1', 'labprog1'],
+      'calculo1':  ['calculo2-novo', 'calculo-numerico'],
+      'introducao':  ['lab-org-arq', 'orga-arquitetura'],
+      'geometria':  ['algebra-linear1'],
+      'algebra-linear1' : ['computacao-grafica'],
+      'linguagem1':  ['linguagem2'],
+      'labprog1':   ['labprog2'],
+      'linguagem2':  ['analise-sistemas', 'estrutura-dados','interfaces-graficas','paradigmas-prog'],
+      'calculo2-novo':  ['calculo3', 'prob-estatistica'],
+      'labprog2':  ['lab-estrutura-dados'],
+      'logica':  ['linguagens-formais'],
+      'discreta2':  ['linguagens-formais'],
+      'estrutura-dados':  ['banco-dados','metodos-avancados'],
+      'lab-estrutura-dados':  ['metodos-avancados'],
+      'analise-sistemas':  ['engenharia-software1'],
+      'linguagens-formais':  ['paradigmas-prog'],
+      'prob-estatistica':  ['prob-estatistica2'],
+      'orga-arquitetura':  ['redes-computadores'],
+      'calculo-numerico':  ['analise-algoritmos'],
+      'calculo3':  ['computacao-grafica'],
+      'analise-algoritmos':  ['computacao-grafica'],
+      'engenharia-software1':  ['engenharia-software2','gerencia-projetos','educacao-distancia'],
+      'paradigmas-prog':  ['inteligencia-artificial','compiladores'],
+      'redes-computadores':  ['seguranca-redes','sistemas-operacionais'],
+      'sistemas-operacionais':  ['compiladores','alto-desempenho'],
+      'metodos-avancados':  ['programacao-web'],
+      'engenharia-software2':  ['ihc'],
+      'computacao-grafica':  ['sistemas-multimidia'],
+      'seguranca-redes':  ['alto-desempenho'],
+      'compiladores':  ['metodos-formais'],
     };
 
     Object.keys(prereqMap).forEach(prereqId => {

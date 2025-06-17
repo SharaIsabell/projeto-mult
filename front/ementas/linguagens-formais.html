@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Ementa - LINGUAGENS FORMAIS E TEORIA DA COMPUTAÇÃO</title>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="../css/ementas.css">
+
+</head>
+<body>
+  <div class="computer-wrapper">
+    <div class="monitor-body">
+      <div class="monitor-top">
+        <div class="screen">
+          <div class="content">
+            <h1>BÁSICO ESPECÍFICO DO CURSO</h1>
+            <h2>CPT01027  - LINGUAGENS FORMAIS E TEORIA DA COMPUTAÇÃO</h2>
+
+      <h3>EMENTA</h3>
+<p>
+(Linguagens) Conceituação, formalização da representação de linguagens por geradores e reconhecedores. Classes de linguagens e suas propriedades. Expressões Regulares. Autômatos finitos e sua relação com gramáticas regulares. Gramáticas Livres de Contexto e autômatos de pilha.<br>
+(Teoria) Histórico, conceitos básicos. Programas e Máquinas. Computabilidade e Solubilidade. Equivalência. Máquina de Turing e suas extensões (Tese de Church-Turing). Recursividade. Noções de Complexidade de Algoritmos (P = NP? e problemas NP-Completos).
+</p>
+
+<h3>REFERÊNCIAS</h3>
+
+<p><strong>Básicas</strong></p>
+<ul>
+  <li>SIPSER, Michael. <i>Introdução à teoria da computação</i>. São Paulo: Thomson, 2007.</li>
+  <li>HOPCROFT, J. E.; ULLMAN, J. D. <i>Introdução à Teoria de Autômatos, Linguagens e Computação</i>. Rio de Janeiro: Campus, 2002.</li>
+</ul>
+
+<p><strong>Complementares</strong></p>
+<ul>
+  <li>Menezes, Paulo F. B. <i>Linguagens Formais e Autômatos</i>. Porto Alegre: UFRGS; Ed. Sagra Luzzato, 2002.</li>
+  <li>DIVERIO, Tiaraju A.; MENEZES, Paulo F. Blauth. <i>Teoria da Computação – Máquinas Universais e Computabilidade</i>. Porto Alegre: Sagra-Luzzato, 1999.</li>
+  <li>GERSTING, Judith L. <i>Fundamentos Matemáticos para a Ciência da Computação</i>. Rio de Janeiro: LTC, 2004.</li>
+  <li>LEWIS, Harry R., PAPADIMITRIOU Christos H. <i>Elementos de teoria da computação</i>. 2ª ed. Porto Alegre: Bookman, 2000.</li>
+  <li>SILVA, Flávio S. C. da; MELO, Ana C. V. de. <i>Modelos Clássicos de Computação</i>. São Paulo: Thomson, 2006.</li>
+  <li>VIEIRA, Newton J. <i>Introdução aos Fundamentos da Computação: Linguagens e Máquinas</i>. São Paulo: Pioneira Thomson, 2006.</li>
+  <li>LEWIS, Harry. R; PAPADIMITRIOU Christos H. <i>Elementos de Teoria da Computação</i>. São Paulo: Editora Artes Médicas, 1999.</li>
+  <li>MARTIN, J. C. <i>Introduction to Languages and the Theory of Computation</i>. McGraw-Hill, 1991.</li>
+</ul>
+
+
+            <a href="../html/fluxograma.html" class="button-back">⮐ Voltar</a>
+          </div>
+        </div>
+      </div>
+      <div class="power-button" title="Clique para ligar/desligar a tela" onclick="togglePower()"></div>
+      <div class="monitor-base"></div>
+      <div class="vent-grid"></div>
+    </div>
+
+    <div class="keyboard-base">
+      <div class="keyboard">
+        <div class="key-row">
+          <div class="key">ESC</div>
+          <div class="key">F1</div>
+          <div class="key">F2</div>
+          <div class="key">F3</div>
+          <div class="key">F4</div>
+          <div class="key">F5</div>
+          <div class="key">F6</div>
+        </div>
+        <div class="key-row">
+          <div class="key">Q</div>
+          <div class="key">W</div>
+          <div class="key">E</div>
+          <div class="key">R</div>
+          <div class="key">T</div>
+          <div class="key">Y</div>
+          <div class="key">U</div>
+          <div class="key">I</div>
+          <div class="key">O</div>
+          <div class="key">P</div>
+        </div>
+        <div class="key-row">
+          <div class="key">A</div>
+          <div class="key">S</div>
+          <div class="key">D</div>
+          <div class="key">F</div>
+          <div class="key">G</div>
+          <div class="key">H</div>
+          <div class="key">J</div>
+          <div class="key">K</div>
+          <div class="key">L</div>
+        </div>
+        <div class="key-row">
+          <div class="key">Z</div>
+          <div class="key">X</div>
+          <div class="key">C</div>
+          <div class="key">V</div>
+          <div class="key">B</div>
+          <div class="key">N</div>
+          <div class="key">M</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function togglePower() {
+      const screen = document.querySelector('.screen');
+      screen.classList.toggle('off');
+    }
+  </script>
+</body>
+</html>

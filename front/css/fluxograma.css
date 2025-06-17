@@ -86,6 +86,9 @@ main.fluxograma {
   flex: 1 1 180px;
   max-width: 220px;
   min-width: 160px;
+  border-radius: 10px;
+  height: fit-content;
+
 }
 
 .disciplina {
@@ -114,6 +117,7 @@ main.fluxograma {
 
 .highlight {
   box-shadow: 0 0 15px 5px #fff;
+  
   transition: box-shadow 0.3s ease-in-out;
 }
 
