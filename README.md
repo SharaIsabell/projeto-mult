@@ -36,7 +36,7 @@ calculadora.html # Ferramenta para o estudante verificar se foi aprovado ou qual
 tcc.html # Informações e orientações sobre o Trabalho de Conclusão de Curso
 
 
-## 📸 Screenshots
+##  Screenshots
 
 ![image](https://github.com/user-attachments/assets/f95884b6-6088-4b98-841c-71b7c5c12f48)
 ![image](https://github.com/user-attachments/assets/97e11af9-5fa3-43b7-8b59-ccc2191743ea)
@@ -49,4 +49,4 @@ Este projeto é desenvolvido apenas para fins educacionais e acadêmicos.
 
 ---
 
-🖥 Desenvolvido por Rennan Silva, Shara Isabell e Joana Dark como parte do projeto de recriação do site de Computação - UEPB da disciplina de Sistemas Multimídias.
+Desenvolvido por Rennan Silva, Shara Isabell e Joana Dark como parte do projeto de recriação do site de Computação - UEPB da disciplina de Sistemas Multimídias.
