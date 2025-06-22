@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TCC II</title>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            background: black;
+            color: #00FF00;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        body {
+            overflow-y: auto;
+            overflow-x: hidden;
+        }
+        canvas {
+            display: block;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 0;
+        }
+        .content {
+            position: relative;
+            z-index: 1;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.9);
+            border: 2px solid #00FF00;
+            box-shadow: 0 0 10px #00FF00;
+            max-width: 80%;
+            margin: 50px auto;
+            white-space: pre-line;
+            display: none;
+        }
+        h1, h2 {
+            color: #00FF00;
+            text-shadow: 0 0 5px #00FF00;
+        }
+        p, li {
+            margin-bottom: 1em;
+            color: #00FF00;
+        }
+        .terminal-bar {
+            background-color: #00FF00;
+            height: 20px;
+            width: 100%;
+            margin-bottom: 10px;
+            box-shadow: 0 0 10px #00FF00;
+        }
+        .back-button {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            z-index: 3;
+            background-color: black;
+            border: 2px solid #00FF00;
+            padding: 10px 20px;
+            color: #00FF00;
+            text-decoration: none;
+            font-family: 'Courier New', Courier, monospace;
+            box-shadow: 0 0 10px #00FF00;
+            transition: background-color 0.3s;
+        }
+        .back-button:hover {
+            background-color: #003300;
+        }
+        ::-webkit-scrollbar {
+            width: 12px;
+        }
+        ::-webkit-scrollbar-track {
+            background: black;
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: #00FF00;
+            border-radius: 10px;
+            border: 2px solid black;
+        }
+        .intro {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background: black;
+            color: #00FF00;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            z-index: 2;
+            font-family: 'Courier New', Courier, monospace;
+            text-shadow: 0 0 10px #00FF00;
+        }
+        .blinking {
+            animation: blink 1s step-start infinite;
+        }
+        @keyframes blink {
+            50% { opacity: 0; }
+        }
+        a {
+            color: #00FF00;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="matrix"></canvas>
+
+    <a href="./tcc.html" class="back-button">&lt; VOLTAR</a>
+
+    <div class="intro">
+        <div>
+            <p>ACESSANDO SISTEMA...</p>
+            <p class="blinking">_</p>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="terminal-bar"></div>
+        <h1>:: TCC II - ACESSO AUTORIZADO ::</h1>
+
+        <h2>I. Informações Gerais</h2>
+        <p>De acordo com a <a href="https://uepb.edu.br/prograd/ensino/regimento-dos-cursos-de-graduacao-da-uepb/#1634215812409-f5af2af3-afb3" target="_blank">RESOLUÇÃO/UEPB/CONSEPE/068/2015</a> e o <a href="https://drive.google.com/file/d/1nWoB5RBmgUAKgpxcqtuffVkiPe4GSYia/view?usp=sharing" target="_blank">Projeto Político Pedagógico do Curso (2016)</a>:</p>
+        <ul>
+            <li>O aluno deverá integralizar dois componentes curriculares de 60 (sessenta) horas para Trabalho de Conclusão de Curso I e Trabalho de Conclusão de Curso II, somando um total de 120 (cento e vinte) horas.</li>
+            <li>O aluno desenvolverá suas pesquisas e terá reuniões periódicas com seu orientador a fim de produzir um trabalho de conclusão de atividades.</li>
+            <li>Ao aluno, se reservará o direito da escolha de um tema (necessariamente dentro das linhas de pesquisa estabelecidas pelo Colegiado de Curso e aprovadas pela assembleia departamental) e do orientador, o qual deverá pertencer ao quadro de docentes EFETIVOS do Curso de Bacharelado em Ciência da Computação.</li>
+            <li>O trabalho individual poderá ser elaborado sob a forma de Estudo de Caso, Artigo Científico, Produto de natureza técnica (software, por exemplo), Produto Midiático, Monografia e/ou Relatório de Projeto.</li>
+        </ul>
+
+        <h2>II. Objetivo</h2>
+        <p>O TCC tem como finalidade sistematizar o conhecimento adquirido no decorrer do Curso, através do aprofundamento de estudos ou a solução de problemas com temas relacionados à prática profissional cotidiana, inserida nas realidades local, regional ou nacional.
+           O TCC II deverá dar continuidade ao planejamento e execução do plano de trabalho iniciado em TCC I, culminando com a elaboração do texto do trabalho de conclusão.</p>
+
+        <h2>III. Procedimentos</h2>
+        <h3>Início (após a matrícula):</h3>
+        <ol>
+            <li>Após a matrícula em TCC II, caberá ao estudante consultar o docente sobre possível orientação. A coordenação de TCC disponibilizará a lista dos Docentes com disponibilidade para orientar no período em questão.</li>
+            <li>O estudante deverá formalizar a orientação à Coordenação, através do envio do Requerimento do TCC, qual consta o Termo de Compromisso de Orientação assinado pelo docente (orientador), no prazo máximo de 30 (trinta) dias após o início do semestre letivo.</li>
+            <li>Após a submissão do Requerimento do TCC, caberá a coordenação do TCC fazer a associação no SUAP-UEPB do docente-orientador e discente. Essa associação ocorrerá após o prazo final para o envio do Requerimento do TCC.</li>
+        </ol>
+
+        <h3>Pré-defesa:</h3>
+        <ol>
+            <li>O estudante deverá manter contato, no mínimo de uma hora semanal, com o docente orientador para discussão e aprimoramento de seu trabalho, devidamente registrado em relatório de atividades.</li>
+            <li>Caberá ao estudante juntamente com o professor-orientador definir como o TCC será elaborado (Monografia, Artigo ou Relatório Técnico). Para isso a UEPB disponibiliza os modelos: <a href="https://biblioteca.uepb.edu.br/abnt-guia-de-normalizacao/" target="_blank">Modelos</a></li>
+            <li>O estudante terá o prazo mínimo de 07 (sete) dias antes da data da apresentação, para entregar/enviar o trabalho aos membros integrantes da Banca Examinadora, para leitura prévia e formulação do Parecer de Avaliação.</li>
+            <li>O professor-orientador deverá agendar a defesa através do Formulário de Agendamento do TCC, para que a coordenação do TCC possa cadastrar no SUAP as informações requeridas. É solicitado que o agendamento seja realizado até 48 horas antes da data da defesa.</li>
+            <li>A Banca Examinadora deverá ser composta por 03 (três) membros e presidida pelo professor-orientador. E deverá ter a participação de 01 (um) docente efetivo da UEPB (no mínimo) e a participação de 01 (um) membro externo ao quadro docente da UEPB (no máximo).</li>
+        </ol>
+
+        <h3>Defesa:</h3>
+        <ol>
+            <li>O estudante deverá comparecer em dia, hora e local determinados para apresentação da versão final de seu TCC, cuja duração não deve exceder 20 minutos.</li>
+            <li>No TCC II será atribuída uma nota de 0 (zero) a 10 (dez) e será considerado aprovado o estudante que obtiver média igual ou superior a 7,0 (sete). A nota final será o resultado da média aritmética das notas atribuídas pelos três integrantes da Banca Examinadora por ocasião da defesa.</li>
+            <li>O professor-orientador é responsável por cadastrar o resultado final no SUAP-UEPB, bem como assinar a ATA eletronicamente e garantir que os demais membros também assinem.</li>
+        </ol>
+
+        <h3>Pós-defesa:</h3>
+        <ol>
+            <li>Após a apresentação do TCC, o estudante terá um prazo de 10 (dez) dias para realizar as correções sugeridas pela Banca Examinadora, submeter à apreciação do orientador, e entregar à Biblioteca a versão final do trabalho.</li>
+            <li>O professor-orientador submete a versão final do TCC corrigida no SUAP, então será disponibilizada a Folha de Rosto para que todos (discente e membros da banca) assinem.</li>
+            <li>Uma vez assinada, o professor envia para o aluno, então este está apto a dar entrada no depósito do TCC junto à Biblioteca.</li>
+        </ol>
+
+        <h2>IV. Download - Documentos:</h2>
+        <ul>
+            <li><a href="https://biblioteca.uepb.edu.br/abnt-guia-de-normalizacao/" target="_blank">Modelos (Artigo, Monografia e Relatório Técnico)</a></li>
+            <li><a href="https://biblioteca.uepb.edu.br/regras-para-o-deposito-dos-trabalhos-academicos/" target="_blank">Procedimentos para o depósito do TCC na Biblioteca</a></li>
+        </ul>
+    </div>
+
+    <script>
+        const canvas = document.getElementById('matrix');
+        const ctx = canvas.getContext('2d');
+
+        canvas.height = window.innerHeight;
+        canvas.width = window.innerWidth;
+
+        const letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+        const fontSize = 14;
+        const columns = canvas.width / fontSize;
+        
+        const drops = [];
+        for(let x = 0; x < columns; x++)
+            drops[x] = 1;
+
+        function draw() {
+            ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            ctx.fillStyle = "#0F0";
+            ctx.font = fontSize + "px monospace";
+            
+            for(let i = 0; i < drops.length; i++) {
+                const text = letters.charAt(Math.floor(Math.random() * letters.length));
+                ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+                
+                if(drops[i] * fontSize > canvas.height && Math.random() > 0.975)
+                    drops[i] = 0;
+                
+                drops[i]++;
+            }
+        }
+
+        setInterval(draw, 33);
+
+        window.addEventListener('resize', () => {
+            canvas.height = window.innerHeight;
+            canvas.width = window.innerWidth;
+        });
+
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                document.querySelector('.intro').style.display = 'none';
+                document.querySelector('.content').style.display = 'block';
+            }, 3000);
+        });
+    </script>
+</body>
+</html>

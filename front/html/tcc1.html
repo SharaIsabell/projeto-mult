@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TCC I</title>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            background: black;
+            color: #00FF00;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        body {
+            overflow-y: auto;
+            overflow-x: hidden;
+        }
+        canvas {
+            display: block;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 0;
+        }
+        .content {
+            position: relative;
+            z-index: 1;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.9);
+            border: 2px solid #00FF00;
+            box-shadow: 0 0 10px #00FF00;
+            max-width: 80%;
+            margin: 50px auto;
+            white-space: pre-line;
+            display: none;
+        }
+        h1, h2 {
+            color: #00FF00;
+            text-shadow: 0 0 5px #00FF00;
+        }
+        p {
+            margin-bottom: 1em;
+            color: #00FF00;
+        }
+        .terminal-bar {
+            background-color: #00FF00;
+            height: 20px;
+            width: 100%;
+            margin-bottom: 10px;
+            box-shadow: 0 0 10px #00FF00;
+        }
+        .back-button {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            z-index: 3;
+            background-color: black;
+            border: 2px solid #00FF00;
+            padding: 10px 20px;
+            color: #00FF00;
+            text-decoration: none;
+            font-family: 'Courier New', Courier, monospace;
+            box-shadow: 0 0 10px #00FF00;
+            transition: background-color 0.3s;
+        }
+        .back-button:hover {
+            background-color: #003300;
+        }
+        ::-webkit-scrollbar {
+            width: 12px;
+        }
+        ::-webkit-scrollbar-track {
+            background: black;
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: #00FF00;
+            border-radius: 10px;
+            border: 2px solid black;
+        }
+        .intro {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background: black;
+            color: #00FF00;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            z-index: 2;
+            font-family: 'Courier New', Courier, monospace;
+            text-shadow: 0 0 10px #00FF00;
+        }
+        .blinking {
+            animation: blink 1s step-start infinite;
+        }
+        @keyframes blink {
+            50% { opacity: 0; }
+        }
+        a {
+            color: #00FF00;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="matrix"></canvas>
+
+    <a href="./tcc.html" class="back-button">&lt; VOLTAR</a>
+
+    <div class="intro">
+        <div>
+            <p>ACESSANDO SISTEMA...</p>
+            <p class="blinking">_</p>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="terminal-bar"></div>
+        <h1>:: TCC I - ACESSO AUTORIZADO ::</h1>
+
+        <h2>I. Informações Gerais</h2>
+        <p>De acordo com a <a href="https://uepb.edu.br/prograd/ensino/regimento-dos-cursos-de-graduacao-da-uepb/#1634215812409-f5af2af3-afb3" target="_blank">RESOLUÇÃO/UEPB/CONSEPE/068/2015</a> e o <a href="https://drive.google.com/file/d/1nWoB5RBmgUAKgpxcqtuffVkiPe4GSYia/view?usp=sharing" target="_blank">Projeto Político Pedagógico do Curso (2016)</a>:</p>
+        <ul>
+            <li>O aluno deverá integralizar dois componentes curriculares de 60 (sessenta) horas para Trabalho de Conclusão de Curso I e Trabalho de Conclusão de Curso II, somando um total de 120 (cento e vinte) horas.</li>
+            <li>O aluno desenvolverá suas pesquisas e terá reuniões periódicas com seu orientador a fim de produzir um trabalho de conclusão de atividades.</li>
+            <li>Ao aluno, se reservará o direito da escolha de um tema (necessariamente dentro das linhas de pesquisa estabelecidas pelo Colegiado de Curso e aprovadas pela assembleia departamental) e do orientador, o qual deverá pertencer ao quadro de docentes EFETIVOS do Curso de Bacharelado em Ciência da Computação.</li>
+            <li>O trabalho individual poderá ser elaborado sob a forma de Estudo de Caso, Artigo Científico, Produto de natureza técnica (software, por exemplo), Produto Midiático, Monografia e/ou Relatório de Projeto.</li>
+        </ul>
+
+        <h2>II. Objetivo</h2>
+        <p>O TCC I tem como finalidade a preparação do projeto ou plano de trabalho, com ênfase na leitura orientada da literatura da área para fundamentação teórico metodológica do trabalho.</p>
+
+        <h2>III. Procedimentos</h2>
+        <ol>
+            <li>Após a matrícula em TCC I, caberá ao estudante consultar o docente sobre possível orientação. A coordenação de TCC disponibilizará a lista dos Docentes com disponibilidade para orientar no período em questão.</li>
+            <li>O estudante deverá formalizar a orientação à Coordenação, através do envio do Requerimento do TCC I, qual consta o Termo de Compromisso de Orientação assinado pelo docente (orientador), no prazo máximo de 30 (trinta) dias após o início do semestre letivo.</li>
+            <li>O estudante deverá manter contato, no mínimo de uma hora semanal, com o docente orientador para discussão e aprimoramento de seu trabalho, devidamente registrado em relatório de atividades.</li>
+            <li>No TCC I será atribuída uma nota de 0 (zero) a 10 (dez) e será considerado aprovado o estudante que obtiver média igual ou superior a 7,0 (sete). A nota do semestre será o resultado da avaliação do desempenho do estudante por seu orientador. E esta será integralizada no SUAP pelo orientador.</li>
+        </ol>
+
+        <h2>IV. Download - Documentos</h2>
+        <p><a href="https://biblioteca.uepb.edu.br/abnt-guia-de-normalizacao/" target="_blank">Modelos (Artigo, Monografia e Relatório Técnico)</a></p>
+    </div>
+
+    <script>
+        const canvas = document.getElementById('matrix');
+        const ctx = canvas.getContext('2d');
+
+        canvas.height = window.innerHeight;
+        canvas.width = window.innerWidth;
+
+        const letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+        const fontSize = 14;
+        const columns = canvas.width / fontSize;
+        
+        const drops = [];
+        for(let x = 0; x < columns; x++)
+            drops[x] = 1;
+
+        function draw() {
+            ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            ctx.fillStyle = "#0F0";
+            ctx.font = fontSize + "px monospace";
+            
+            for(let i = 0; i < drops.length; i++) {
+                const text = letters.charAt(Math.floor(Math.random() * letters.length));
+                ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+                
+                if(drops[i] * fontSize > canvas.height && Math.random() > 0.975)
+                    drops[i] = 0;
+                
+                drops[i]++;
+            }
+        }
+
+        setInterval(draw, 33);
+
+        window.addEventListener('resize', () => {
+            canvas.height = window.innerHeight;
+            canvas.width = window.innerWidth;
+        });
+
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                document.querySelector('.intro').style.display = 'none';
+                document.querySelector('.content').style.display = 'block';
+            }, 3000);
+        });
+    </script>
+</body>
+</html>
