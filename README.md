@@ -26,15 +26,22 @@ Este projeto tem como objetivo a recriação do site do curso de Computação da
 
 ## Estrutura do Projeto
 /img # Imagens e ícones
-/css # Arquivos de estilo
-/js # Scripts JavaScript
-index.html # Página inicial
-calendario.html # Página de calendário acadêmico
-fluxograma.html # Fluxograma do curso
-professores.html # Informações sobre professores
-calculadora.html # Ferramenta para o estudante verificar se foi aprovado ou qual nota precisa obter na prova final
-tcc.html # Informações e orientações sobre o Trabalho de Conclusão de Curso
 
+/css # Arquivos de estilo
+
+/js # Scripts JavaScript
+
+index.html # Página inicial
+
+calendario.html # Página de calendário acadêmico
+
+fluxograma.html # Fluxograma do curso
+
+professores.html # Informações sobre professores
+
+calculadora.html # Ferramenta para o estudante verificar se foi aprovado ou qual nota precisa obter na prova final
+
+tcc.html # Informações e orientações sobre o Trabalho de Conclusão de Curso
 
 ##  Screenshots
 
