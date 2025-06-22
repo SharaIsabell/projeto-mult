@@ -22,7 +22,7 @@ body::before {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.85); /* ajuste a opacidade e cor aqui */
+  background: rgba(0, 0, 0, 0.85); 
   z-index: -1;
   pointer-events: none;
 }
@@ -38,13 +38,13 @@ body::before {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  overflow: visible; /* antes estava "hidden", o que esconde conteúdo extra */
+  overflow: visible; 
 }
 
 .pgina-inicial .overlap {
 
   width: 100%;
-  min-height: 100vh; /* cresce com o conteúdo se for maior que a tela */
+  min-height: 100vh; 
 }
 
 .pgina-inicial .borda-vermelha {
@@ -86,10 +86,10 @@ body::before {
   top: 500px;
   left: 50%;
   transform: translateX(-50%);
-  background-color: #1e1e1e; /* fundo escuro em vez de branco */
-  border: 4px double #ff0000; /* borda dupla vermelha */
-  box-shadow: 0 0 12px #ff0000; /* brilho neon */
-  border-radius: 8px; /* cantos discretamente arredondados */
+  background-color: #1e1e1e; 
+  border: 4px double #ff0000; 
+  box-shadow: 0 0 12px #ff0000; 
+  border-radius: 8px; 
 }
 
 
@@ -303,9 +303,9 @@ body::before {
   position: absolute;
   bottom: 100%;
   left: 0;
-  background-color: #000000; /* fundo preto */
-  color: #00FF00; /* letras verdes */
-  border: 2px solid #00FF00; /* borda verde */
+  background-color: #000000; 
+  color: #00FF00; 
+  border: 2px solid #00FF00; 
   padding: 12px;
   font-family: 'Press Start 2P', monospace;
   font-size: 10px;
